@@ -42,6 +42,7 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 * Python 2.4+
 
 ## Theme ##
+[IR_BLACK] (http://blog.toddwerth.com/entries/8)
 
 
 have fun ;-)
