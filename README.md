@@ -9,16 +9,32 @@ Clone this repo into ```~/.vim```
 
 'cd' into the ```~/.vim``` and git the submodules
 
-``` git submodule update --init ```
+```
+git submodule update --init 
+```
 
 create a ```~/.vimrc``` 
 
-``` echo "source ~/.vim/vimrc" > ~/.vimrc ```
+``` 
+echo "source ~/.vim/vimrc" > ~/.vimrc 
+```
 
 do it if you are using gvim :
 
-```echo "source ~/.vim/gvimrc" > ~/.gvimr ```
+```
+echo "source ~/.vim/gvimrc" > ~/.gvimr 
+```
+
+create ```~/.vim/swaps``` and ```~/.vim/backups```
+
+``` 
+mkdir -p ~/.vim/swaps ~/.vim/backups 
+```
 
 ## Dependencies ##
-Exuberant Ctags (http://ctags.sourceforge.net/)
+*Vim 7.3+
+*Exuberant Ctags (http://ctags.sourceforge.net/)
+*Python support for Vim
+*Python 2.4+
 
+have fun ;-)
