@@ -7,6 +7,7 @@ call pathogen#infect()
 
 "turn on syntax highlighting
 syntax on
+syntax enable
 "turn on ftplugins and indent files
 filetype plugin indent on
 
@@ -22,7 +23,7 @@ set showmatch
 set lazyredraw
 
 set number
-set showbreak=///
+set showbreak=///...
 set wrap linebreak nolist
 
 set directory=~/.vim/swaps
@@ -87,10 +88,9 @@ else
   if $COLORTERM == 'gnome-terminal'
     ""set term=gnome-256color
     ""set term=ansi
-    set t_Co=256
+    "set t_Co=256
     set background=dark
-    colorscheme railscasts
-    "colorscheme solarized
+    colorscheme ir_black
   else
     colorscheme default
   endif
