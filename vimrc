@@ -1,5 +1,3 @@
-
-
 set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -59,6 +57,7 @@ set mouse=a
 "hide buffers when not displayed
 set hidden
 
+let g:ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
 if has("gui_running")
   "tell the term has 256 colors
@@ -141,8 +140,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"key mapping for saving file
-nmap <C-s> :w<CR>
 
 ""key mapping for tab navigation
 nmap <Tab> gt
