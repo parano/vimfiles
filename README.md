@@ -1,11 +1,14 @@
 Parano's vim files
 ================
 
+
 ## Usage ##
 
 Clone this repo into ```~/.vim```
 
-``` git clone git://github.com/akitaonrails/vimfiles.git ~/.vim ```
+``` 
+git clone git://github.com/akitaonrails/vimfiles.git ~/.vim 
+```
 
 'cd' into the ```~/.vim``` and git the submodules
 
@@ -32,9 +35,13 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 ```
 
 ## Dependencies ##
-*Vim 7.3+
-*Exuberant Ctags (http://ctags.sourceforge.net/)
-*Python support for Vim
-*Python 2.4+
+* Vim 7.3+
+* Exuberant Ctags (http://ctags.sourceforge.net/)
+* Python support for Vim
+* ack-grep
+* Python 2.4+
+
+## Theme ##
+
 
 have fun ;-)
