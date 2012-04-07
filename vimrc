@@ -96,7 +96,7 @@ else
   if $COLORTERM == 'gnome-terminal'
     ""set term=gnome-256color
     ""set term=ansi
-    "set t_Co=256
+    set t_Co=256
     set background=dark
     colorscheme ir_black
   else
@@ -181,6 +181,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+"key mapping for inserting date
+"2012-04-07 12:58
+nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 
 ""key mapping for tab navigation
 nmap <Tab> gt
