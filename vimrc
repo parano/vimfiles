@@ -39,11 +39,20 @@ let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
 nnoremap <C-c> :nohls<CR><C-L>
 inoremap <C-c> <C-O>:nohls<CR>
 
-"enable neocomplcache
+"neocomplcache 
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1 
+let g:neocomplcache_disable_auto_complete = 1 
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabRetainCompletionType=2
 
-"turn off needless toolbar on gvim/mvim
-set guioptions-=T
+" Enable heavy omni completion. 
+if !exists('g:neocomplcache_omni_patterns') 
+  let g:neocomplcache_omni_patterns = {} 
+endif 
+"turn let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::' off needless toolbar on gvim/mvim
+set guioptions-=T"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete "
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'"
 
 "indent settings
 set shiftwidth=2
@@ -113,6 +122,38 @@ let g:user_zen_settings = {
       \}
 let g:user_zen_expandabbr_key='<c-k>'
 
+"snipmate setup
+try
+  source ~/.vim/snippets/support_functions.vim
+catch
+  source ~/vimfiles/snippets/support_functions.vim
+endtry
+autocmd vimenter * call s:SetupSnippets()
+function! s:SetupSnippets()
+
+  "if we're in a rails env then read in the rails snippets
+  if filereadable("./config/environment.rb")
+    try
+      call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
+      call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
+    catch
+      call ExtractSnips("~/vimfiles/snippets/ruby-rails", "ruby")
+      call ExtractSnips("~/vimfiles/snippets/eruby-rails", "eruby")
+    endtry
+  endif
+
+  try
+    call ExtractSnips("~/.vim/snippets/html", "eruby")
+    call ExtractSnips("~/.vim/snippets/html", "xhtml")
+    call ExtractSnips("~/.vim/snippets/html", "php")
+  catch
+    call ExtractSnips("~/vimfiles/snippets/html", "eruby")
+    call ExtractSnips("~/vimfiles/snippets/html", "xhtml")
+    call ExtractSnips("~/vimfiles/snippets/html", "php")
+  endtry
+endfunction
+
+
 "indent_guides settings
 set ts=2 sw=2 et
 let g:indent_guides_start_level = 2
@@ -126,10 +167,10 @@ let g:ragtag_global_maps = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.exe$\|\.so$\|\.dll$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'file': '\.exe$\|\.so$\|\.dll$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
 
 
 """Key mappings
