@@ -7,7 +7,7 @@ Parano's vim files
 Clone this repo into ```~/.vim```
 
 ``` 
-git clone git://github.com/akitaonrails/vimfiles.git ~/.vim 
+git clone git://github.com/parano/vimfiles.git ~/.vim 
 ```
 
 'cd' into the ```~/.vim``` and git the submodules
