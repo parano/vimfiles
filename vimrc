@@ -209,7 +209,6 @@ nnoremap <leader>b :BufExplorer<cr>
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
 
-
 """useful functions
 
 "visual search mappings
