@@ -94,8 +94,8 @@ else
 
   "set railscasts colorscheme when running vim in gnome terminal
   if $COLORTERM == 'gnome-terminal'
-    ""set term=gnome-256color
-    ""set term=ansi
+    "set term=gnome-256color
+    "set term=ansi
     set t_Co=256
     set background=dark
     colorscheme ir_black
