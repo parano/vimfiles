@@ -55,10 +55,17 @@ set guioptions-=T"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete 
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'"
 
 "indent settings
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
+set textwidth=0
 set expandtab
+set smarttab
 set autoindent
+set et
+autocmd BufEnter *.md set filetype=markdown
+autocmd FileType markdown setlocal textwidth=80
+autocmd FileType ruby,sass,css,less,html,javascript setlocal shiftwidth=2
+
 
 "some stuff to get the mouse going in term
 set mouse=a
@@ -155,7 +162,7 @@ endfunction
 
 
 "indent_guides settings
-set ts=2 sw=2 et
+"set ts=2 sw=2 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
@@ -171,7 +178,6 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\.exe$\|\.so$\|\.dll$',
       \ 'link': 'some_bad_symbolic_links',
       \ }
-
 
 """Key mappings
 
@@ -230,8 +236,6 @@ function! SetCursorPosition()
     endif
   end
 endfunction
-
-
 
 "set fileencodings=utf8,cp936,gb18030,big5
 set encoding=utf8
