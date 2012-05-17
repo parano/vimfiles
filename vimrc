@@ -21,7 +21,7 @@ set showmatch
 set lazyredraw
 
 set number
-set showbreak=///...
+set showbreak=O00oo..
 set wrap linebreak nolist
 
 set directory=~/.vim/swaps
@@ -55,10 +55,15 @@ set guioptions-=T"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete 
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'"
 
 "indent settings
-set shiftwidth=2
+set shiftwidth=4
 set softtabstop=2
-set expandtab
+"set expandtab
 set autoindent
+
+"indent_guides settings
+"set ts=2 sw=2 et
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 "some stuff to get the mouse going in term
 set mouse=a
@@ -92,7 +97,6 @@ else
   "dont load csapprox if there is no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1
 
-  "set railscasts colorscheme when running vim in gnome terminal
   if $COLORTERM == 'gnome-terminal'
     "set term=gnome-256color
     "set term=ansi
@@ -152,12 +156,6 @@ function! s:SetupSnippets()
     call ExtractSnips("~/vimfiles/snippets/html", "php")
   endtry
 endfunction
-
-
-"indent_guides settings
-set ts=2 sw=2 et
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
 
 "bindings for ragtag
 inoremap <M-o>       <Esc>o
@@ -233,8 +231,9 @@ function! SetCursorPosition()
   end
 endfunction
 
-
+" Latex preview
+let tex_preview_always_autosave = 1
+let no_tex_maps = 1
 
 "set fileencodings=utf8,cp936,gb18030,big5
 set encoding=utf8
-

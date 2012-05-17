@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/parano/code/rails_projects/labeller/app/models'
 let g:netrw_dirhist_2='/home/parano/code/rails_projects/labeller'
+let g:netrw_dirhist_3='/home/parano/.oh-my-zsh'
+let g:netrw_dirhist_4='/home/parano/.gconf'
+let g:netrw_dirhist_5='/home/parano/.vim/bundle/c.vim/c-support/templates'
+let g:netrw_dirhist_6='/home/parano/.vim/bundle/c.vim/c-support'
+let g:netrw_dirhist_7='/home/parano/.oh-my-zsh/themes'
+let g:netrw_dirhist_8='/home/parano/code/jscode'
