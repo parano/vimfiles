@@ -58,7 +58,17 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'"
 set shiftwidth=4
 set softtabstop=2
 "set expandtab
+"
+set softtabstop=4
+set textwidth=0
+set expandtab
+set smarttab
 set autoindent
+set et
+autocmd BufEnter *.md set filetype=markdown
+autocmd FileType markdown setlocal textwidth=80
+autocmd FileType ruby,sass,css,less,html,javascript setlocal shiftwidth=2
+
 
 "indent_guides settings
 "set ts=2 sw=2 et
@@ -157,6 +167,11 @@ function! s:SetupSnippets()
   endtry
 endfunction
 
+"indent_guides settings
+"set ts=2 sw=2 et
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
 "bindings for ragtag
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
@@ -169,7 +184,6 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\.exe$\|\.so$\|\.dll$',
       \ 'link': 'some_bad_symbolic_links',
       \ }
-
 
 """Key mappings
 
@@ -233,7 +247,7 @@ endfunction
 
 " Latex preview
 let tex_preview_always_autosave = 1
-let no_tex_maps = 1
+"let no_tex_maps = 1
 
 "set fileencodings=utf8,cp936,gb18030,big5
 set encoding=utf8
