@@ -91,3 +91,15 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/CamelCaseMotion"]
+	path = bundle/CamelCaseMotion
+	url = http://github.com/bkad/CamelCaseMotion.git
+[submodule "bundle/argtextboj"]
+	path = bundle/argtextboj
+	url = https://github.com/vim-scripts/argtextobj.vim.git
+[submodule "bundle/vim-indent-object"]
+	path = bundle/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
+[submodule "bundle/vim-textobj-rubyblock"]
+	path = bundle/vim-textobj-rubyblock
+	url = https://github.com/michaeljsmith/vim-indent-object
