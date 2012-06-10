@@ -214,7 +214,7 @@ let NERDChristmasTree=0
 let NERDTreeWinSize=30
 let NERDTreeChDirMode=2
 "let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
-"let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeSortOrder=['\/$','\.rb$','\.py$','\.c$','\.js$','*','.txt$','.md$']
 "let NERDTreeShowBookmarks=1
 "let NERDTreeWinPos = "right"
 
