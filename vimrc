@@ -81,6 +81,9 @@ set hidden
 
 let g:ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
+map <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>a
+
 if has("gui_running")
   "tell the term has 256 colors
   set t_Co=256
