@@ -102,4 +102,4 @@
 	url = https://github.com/michaeljsmith/vim-indent-object
 [submodule "bundle/vim-textobj-rubyblock"]
 	path = bundle/vim-textobj-rubyblock
-	url = https://github.com/michaeljsmith/vim-indent-object
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
