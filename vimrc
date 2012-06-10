@@ -55,19 +55,17 @@ set guioptions-=T"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete 
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'"
 
 "indent settings
+set expandtab
 set shiftwidth=4
-set softtabstop=2
-"set expandtab
-"
 set softtabstop=4
 set textwidth=0
-set expandtab
 set smarttab
 set autoindent
-set et
 autocmd BufEnter *.md set filetype=markdown
 autocmd FileType markdown setlocal textwidth=80
-autocmd FileType ruby,sass,css,less,html,javascript setlocal shiftwidth=2
+autocmd FileType html,htmldjango,haml,sass,scss,ruby,javascript,php,css setlocal tabstop=4 shiftwidth=2 softtabstop=2
+autocmd FileType python set textwidth=0
+autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
 
 
 "indent_guides settings
@@ -211,8 +209,25 @@ vmap <D-]> >gv
 nnoremap ; :
 let mapleader=","
 
+" Nerd Tree 
+let NERDChristmasTree=0
+let NERDTreeWinSize=30
+let NERDTreeChDirMode=2
+"let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
+"let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+"let NERDTreeShowBookmarks=1
+"let NERDTreeWinPos = "right"
+
+" Tagbar
+"let g:tagbar_left=1
+let g:tagbar_width=30
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0 
+let g:tagbar_compact = 1
+
 nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
-nnoremap <silent> <F6> :TlistToggle<CR>
+nnoremap <silent> <F6> :TagbarToggle<CR>
+nnoremap <silent> <F7> :TlistToggle<CR>
 nnoremap <C-A> :IndentGuidesToggle<CR>
 
 "map to bufexplorer
@@ -251,3 +266,8 @@ let tex_preview_always_autosave = 1
 
 "set fileencodings=utf8,cp936,gb18030,big5
 set encoding=utf8
+
+
+
+
+
