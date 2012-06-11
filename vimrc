@@ -83,6 +83,7 @@ let g:ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
+imap <F1> <Esc>:w<CR>
 
 map <C-e> :Errors<CR>
 
