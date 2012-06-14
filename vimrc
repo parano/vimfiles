@@ -30,7 +30,7 @@ set backupdir=~/.vim/backups
 
 set linespace=2
 
-set cursorline
+"set cursorline
 
 set laststatus=2
 let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
@@ -83,8 +83,8 @@ let g:ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
+map <F1> <Esc>:w<CR>
 imap <F1> <Esc>:w<CR>
-
 map <C-e> :Errors<CR>
 
 if has("gui_running")
@@ -112,11 +112,12 @@ else
   let g:CSApprox_loaded = 1
 
   if $COLORTERM == 'gnome-terminal'
-    "set term=gnome-256color
+    set term=gnome-256color
     "set term=ansi
-    set t_Co=256
-    set background=dark
-    colorscheme ir_black
+    "set t_Co=256
+    "set background=dark
+    "colorscheme ir_black
+    colorscheme my_ir_black
   else
     colorscheme default
   endif
