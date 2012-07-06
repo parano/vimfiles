@@ -112,9 +112,9 @@ else
   let g:CSApprox_loaded = 1
 
   if $COLORTERM == 'gnome-terminal'
-    set term=gnome-256color
+    "set term=gnome-256color
     "set term=ansi
-    "set t_Co=256
+    set t_Co=256
     "set background=dark
     "colorscheme ir_black
     colorscheme my_ir_black
@@ -237,8 +237,11 @@ nnoremap <silent> <F6> :TagbarToggle<CR>
 nnoremap <silent> <F7> :TlistToggle<CR>
 nnoremap <C-A> :IndentGuidesToggle<CR>
 
+nnoremap / /\v
+vnoremap / /\v
+
 "map to bufexplorer
-nnoremap <leader>b :BufExplorer<cr>
+nnoremap <C-B> :BufExplorer<cr>
 
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
@@ -271,10 +274,9 @@ endfunction
 let tex_preview_always_autosave = 1
 "let no_tex_maps = 1
 
-"set fileencodings=utf8,cp936,gb18030,big5
-set encoding=utf8
-
-
+set enc=utf-8
+set fenc=utf-8
+set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
 
 
 
