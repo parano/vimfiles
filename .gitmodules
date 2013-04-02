@@ -1,6 +1,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/NERD_commenter"]
 	path = bundle/NERD_commenter
 	url = git://github.com/scrooloose/nerdcommenter.git
