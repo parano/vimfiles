@@ -10,23 +10,8 @@ Clone this repo into ```~/.vim```
 git clone git://github.com/parano/vimfiles.git ~/.vim 
 ```
 
-'cd' into the ```~/.vim``` and git the submodules
 
-```
-git submodule update --init 
-```
 
-create a ```~/.vimrc``` 
-
-``` 
-echo "source ~/.vim/vimrc" > ~/.vimrc 
-```
-
-do it if you are using gvim :
-
-```
-echo "source ~/.vim/gvimrc" > ~/.gvimr 
-```
 
 create ```~/.vim/swaps``` and ```~/.vim/backups```
 
@@ -44,5 +29,14 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 ## Theme ##
 [IR_BLACK] (http://blog.toddwerth.com/entries/8)
 
+
+## Key Bindings
+
+*F1* Quick Save
+*F2* Toggle Paste Mode
+*F3* Insert current time
+*F4* GundoToggle
+*F5* NERDTreeToggle
+*F6* TagbarToggle
 
 have fun ;-)

@@ -1,37 +1,118 @@
-set nocompatible
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-call pathogen#infect()
+set nocompatible " be iMproved
+filetype off " Vundle required!
 
-"turn on syntax highlighting
+" Vundle Settings
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+source ~/.vim/vimrc.bundles
+
+" Vundle required! 
+filetype plugin indent on 
+
+
+" turn on syntax highlighting
 syntax on
-syntax enable
-"turn on ftplugins and indent files
-filetype plugin indent on
 
+" backspace and delete problem
 set backspace=indent,eol,start
+
+" more history
 set history=1000
 
-set showcmd
-set showmode
-
-set incsearch
-set hlsearch
-set showmatch
-set lazyredraw
-
-set number
-set showbreak=O00oo..
-set wrap linebreak nolist
-
+" backup/swap file directory
 set directory=~/.vim/swaps
 set backup
 set backupdir=~/.vim/backups
 
-set linespace=2
+" status bar
+set showcmd
+set showmode
+set number
+
+" searching
+set incsearch " incremental searching
+set hlsearch " hightlight matching
+set lazyredraw " do not redraw while running macros 
+
+set showbreak="->""
+set wrap linebreak nolist " only manuly insert line breaks
+set showmatch " show matching brackets for a moment
+
+" indent settings
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set textwidth=0
+set linespace=4
+set smarttab
+set autoindent
+autocmd BufEnter *.md set filetype=markdown
+autocmd FileType markdown setlocal textwidth=80
+autocmd FileType html,css,haml,sass,scss,ruby,javascript,jade,coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
+autocmd FileType python set textwidth=0
+autocmd Syntax javascript set syntax=jquery 
+
+" some stuff to get the mouse going in term
+set mouse=a
+
+" colors, fonts
+if has("gui_running")
+  "tell the term has 256 colors
+  set t_Co=256
+
+  if has("gui_gnome")
+    set t_Co=256
+    set term=gnome-256color
+    colorscheme railscasts
+    set guifont=Monospace\ Bold\ 12
+  endif
+
+  if has("gui_win32") || has("gui_win32s")
+    set guifont=Consolas:h12
+    set enc=utf-8
+  endif
+
+  if has("unix")
+    let s:uname = system("uname -s")
+    if s:uname == "Darwin"
+      set go=aAce  " remove toolbar
+      set guifont=Monaco:h13
+      noremap <D-M-Left> :tabprevious<cr>
+      noremap <D-M-Right> :tabnext<cr>
+      map <D-1> 1gt
+      map <D-2> 2gt
+      map <D-3> 3gt
+      map <D-4> 4gt
+      map <D-5> 5gt
+      map <D-6> 6gt
+      map <D-7> 7gt
+      map <D-8> 8gt
+      map <D-9> 9gt
+      map <D-0> :tablast<CR>
+      set bg=dark
+      if &background == "dark"
+          hi normal guibg=black
+          set transp=8
+      endif
+    endif
+  endif
+else
+  "dont load csapprox if there is no gui support - silences an annoying warning
+  let g:CSApprox_loaded = 1
+
+  if $COLORTERM == 'gnome-terminal'
+    "set term=gnome-256color
+    "set term=ansi
+    set t_Co=256
+    "set background=dark
+    colorscheme my_ir_black
+  else
+    set t_Co=256
+    colorscheme default
+  endif
+endif
 
 "set cursorline
-
 set laststatus=2
 let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
 
@@ -46,100 +127,12 @@ let g:neocomplcache_disable_auto_complete = 1
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabRetainCompletionType=2
 
-" Enable heavy omni completion. 
-if !exists('g:neocomplcache_omni_patterns') 
-  let g:neocomplcache_omni_patterns = {} 
-endif 
-"turn let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::' off needless toolbar on gvim/mvim
-set guioptions-=T"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete "
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'"
-
-"indent settings
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set textwidth=0
-set smarttab
-set autoindent
-autocmd BufEnter *.md set filetype=markdown
-autocmd FileType markdown setlocal textwidth=80
-autocmd FileType html,htmldjango,haml,sass,scss,ruby,javascript,php,css setlocal tabstop=4 shiftwidth=2 softtabstop=2
-autocmd FileType python set textwidth=0
-autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
-
-
-"indent_guides settings
-"set ts=2 sw=2 et
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-
-"some stuff to get the mouse going in term
-set mouse=a
-
 "hide buffers when not displayed
 set hidden
 
-let g:ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
-
-map <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>a
 map <F1> <Esc>:w<CR>
 imap <F1> <Esc>:w<CR>
 map <C-e> :Errors<CR>
-
-if has("gui_running")
-  "tell the term has 256 colors
-  set t_Co=256
-
-  colorscheme railscasts
-  set guitablabel=%M%t
-  set lines=40
-  set columns=115
-
-  if has("gui_gnome")
-    set t_Co=256
-    set term=gnome-256color
-    colorscheme railscasts
-    set guifont=Monospace\ Bold\ 12
-  endif
-
-  if has("gui_win32") || has("gui_win32s")
-    set guifont=Consolas:h12
-    set enc=utf-8
-  endif
-else
-  "dont load csapprox if there is no gui support - silences an annoying warning
-  let g:CSApprox_loaded = 1
-
-  if $COLORTERM == 'gnome-terminal'
-    "set term=gnome-256color
-    "set term=ansi
-    set t_Co=256
-    "set background=dark
-    "colorscheme ir_black
-    colorscheme my_ir_black
-  else
-    colorscheme default
-  endif
-endif
-
-"Enabling Zencoding
-let g:user_zen_settings = {
-      \  'php' : {
-      \    'extends' : 'html',
-      \    'filters' : 'c',
-      \  },
-      \  'xml' : {
-      \    'extends' : 'html',
-      \  },
-      \  'haml' : {
-      \    'extends' : 'html',
-      \  },
-      \  'erb' : {
-      \    'extends' : 'html',
-      \  },
-      \}
-let g:user_zen_expandabbr_key='<c-k>'
 
 "snipmate setup
 try
@@ -172,16 +165,7 @@ function! s:SetupSnippets()
   endtry
 endfunction
 
-"indent_guides settings
-"set ts=2 sw=2 et
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-
-"bindings for ragtag
-inoremap <M-o>       <Esc>o
-inoremap <C-j>       <Down>
-let g:ragtag_global_maps = 1
-
+" ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
@@ -190,23 +174,20 @@ let g:ctrlp_custom_ignore = {
       \ 'link': 'some_bad_symbolic_links',
       \ }
 
-"""Key mappings
-
-"key mapping for window navigation
+" key mapping for window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"key mapping for inserting date
-"2012-04-07 12:58
+" key mapping for inserting date
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 
-""key mapping for tab navigation
+" key mapping for tab navigation
 nmap <Tab> gt
 nmap <S-Tab> gT
 
-"Key mapping for textmate-like indentation
+" key mapping for textmate-like indentation
 nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
@@ -220,31 +201,24 @@ let mapleader=","
 let NERDChristmasTree=0
 let NERDTreeWinSize=30
 let NERDTreeChDirMode=2
-"let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.swp$']
 let NERDTreeSortOrder=['\/$','\.rb$','\.py$','\.c$','\.js$','*','.txt$','.md$']
-"let NERDTreeShowBookmarks=1
 "let NERDTreeWinPos = "right"
+nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 " Tagbar
-"let g:tagbar_left=1
+let g:tagbar_left=0
 let g:tagbar_width=30
-let g:tagbar_autofocus = 1
-let g:tagbar_sort = 0 
-let g:tagbar_compact = 1
+nmap <F6> :TagbarToggle<cr>
 
-nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
-nnoremap <silent> <F6> :TagbarToggle<CR>
-nnoremap <silent> <F7> :TlistToggle<CR>
-nnoremap <C-A> :IndentGuidesToggle<CR>
 
 nnoremap / /\v
 vnoremap / /\v
 
-"map to bufexplorer
-nnoremap <C-B> :BufExplorer<cr>
-
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
+let g:gundo_right=1
+
 
 """useful functions
 
@@ -270,9 +244,10 @@ function! SetCursorPosition()
   end
 endfunction
 
-" Latex preview
-let tex_preview_always_autosave = 1
-"let no_tex_maps = 1
+" toggle paste mode
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>
 
 set enc=utf-8
 set fenc=utf-8
