@@ -34,7 +34,7 @@ set incsearch " incremental searching
 set hlsearch " hightlight matching
 set lazyredraw " do not redraw while running macros 
 
-set showbreak="->""
+set showbreak=->
 set wrap linebreak nolist " only manuly insert line breaks
 set showmatch " show matching brackets for a moment
 
@@ -108,7 +108,7 @@ else
     colorscheme my_ir_black
   else
     set t_Co=256
-    colorscheme default
+    colorscheme my_ir_black
   endif
 endif
 
@@ -120,12 +120,39 @@ let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
 nnoremap <C-c> :nohls<CR><C-L>
 inoremap <C-c> <C-O>:nohls<CR>
 
-"neocomplcache 
+""neocomplcache 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1 
 let g:neocomplcache_disable_auto_complete = 1 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabRetainCompletionType=2
+
+"" Sinppets
+" Enable snipMate compatibility feature.
+let g:neosnippet#disable_runtime_snippets = {
+\   '_' : 1,
+\ }
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
+" Plugin key-mappings.
+imap <C-i>     <Plug>(neosnippet_expand_or_jump)
+smap <C-i>     <Plug>(neosnippet_expand_or_jump)
+"xmap <C-i>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 
 "hide buffers when not displayed
 set hidden
@@ -133,37 +160,6 @@ set hidden
 map <F1> <Esc>:w<CR>
 imap <F1> <Esc>:w<CR>
 map <C-e> :Errors<CR>
-
-"snipmate setup
-try
-  source ~/.vim/snippets/support_functions.vim
-catch
-  source ~/vimfiles/snippets/support_functions.vim
-endtry
-autocmd vimenter * call s:SetupSnippets()
-function! s:SetupSnippets()
-
-  "if we're in a rails env then read in the rails snippets
-  if filereadable("./config/environment.rb")
-    try
-      call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-      call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
-    catch
-      call ExtractSnips("~/vimfiles/snippets/ruby-rails", "ruby")
-      call ExtractSnips("~/vimfiles/snippets/eruby-rails", "eruby")
-    endtry
-  endif
-
-  try
-    call ExtractSnips("~/.vim/snippets/html", "eruby")
-    call ExtractSnips("~/.vim/snippets/html", "xhtml")
-    call ExtractSnips("~/.vim/snippets/html", "php")
-  catch
-    call ExtractSnips("~/vimfiles/snippets/html", "eruby")
-    call ExtractSnips("~/vimfiles/snippets/html", "xhtml")
-    call ExtractSnips("~/vimfiles/snippets/html", "php")
-  endtry
-endfunction
 
 " ctrlp
 let g:ctrlp_map = '<c-p>'
@@ -211,6 +207,7 @@ let g:tagbar_left=0
 let g:tagbar_width=30
 nmap <F6> :TagbarToggle<cr>
 
+let g:EasyMotion_leader_key = '<Leader>'
 
 nnoremap / /\v
 vnoremap / /\v
@@ -252,6 +249,3 @@ set pastetoggle=<F2>
 set enc=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
-
-
-

@@ -10,8 +10,10 @@ Clone this repo into ```~/.vim```
 git clone git://github.com/parano/vimfiles.git ~/.vim 
 ```
 
-
-
+Install bundled plugins
+```
+vim +BundleInstall +qall
+```
 
 create ```~/.vim/swaps``` and ```~/.vim/backups```
 
@@ -32,11 +34,12 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 
 ## Key Bindings
 
-*F1* Quick Save
-*F2* Toggle Paste Mode
-*F3* Insert current time
-*F4* GundoToggle
-*F5* NERDTreeToggle
-*F6* TagbarToggle
+*F1 - Quick Save
+*F2 - Toggle Paste Mode
+*F3 - Insert current time
+*F4 - GundoToggle
+*F5 - NERDTreeToggle
+*F6 - TagbarToggle
 
+## 
 have fun ;-)
