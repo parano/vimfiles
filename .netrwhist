@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/parano/.bash'
-let g:netrw_dirhist_2='/home/parano/code/ruby-china/lib/tasks'
-let g:netrw_dirhist_3='/home/parano/.vimperator'
-let g:netrw_dirhist_4='/home/parano/code/ir_course_project/weibo-example'
-let g:netrw_dirhist_5='/home/parano/.vim/snippets'
-let g:netrw_dirhist_6='/tmp/pip-build/numpy'
-let g:netrw_dirhist_7='/home/parano/Granedu.new/pages'
