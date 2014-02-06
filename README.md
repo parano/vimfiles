@@ -34,12 +34,12 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 
 ## Key Bindings
 
-*F1 - Quick Save
-*F2 - Toggle Paste Mode
-*F3 - Insert current time
-*F4 - GundoToggle
-*F5 - NERDTreeToggle
-*F6 - TagbarToggle
+* F1 - Quick Save
+* F2 - Toggle Paste Mode
+* F3 - Insert current time
+* F4 - GundoToggle
+* F5 - NERDTreeToggle
+* F6 - TagbarToggle
 
 ## 
 have fun ;-)
