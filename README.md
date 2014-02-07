@@ -2,20 +2,23 @@ Parano's vim files
 ================
 
 
-## Usage ##
+## Installation ##
 
-Clone this repo into ```~/.vim```
+Clone this repo into ```~/.vim```.
 
 ``` 
 git clone git://github.com/parano/vimfiles.git ~/.vim 
 ```
 
-Install bundled plugins
+Create link for ```.vimrc```.
+
+
+Install bundled plugins.
 ```
 vim +BundleInstall +qall
 ```
 
-create ```~/.vim/swaps``` and ```~/.vim/backups```
+create ```~/.vim/swaps``` and ```~/.vim/backups```.
 
 ``` 
 mkdir -p ~/.vim/swaps ~/.vim/backups 
@@ -41,5 +44,5 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 * F5 - NERDTreeToggle
 * F6 - TagbarToggle
 
-## 
+## ##  
 have fun ;-)
