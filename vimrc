@@ -194,12 +194,11 @@ nnoremap ; :
 let mapleader=","
 
 " Nerd Tree 
-let NERDChristmasTree=0
-let NERDTreeWinSize=30
+let NERDChristmasTree=1
+let NERDTreeWinSize=25
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.swp$']
 let NERDTreeSortOrder=['\/$','\.rb$','\.py$','\.c$','\.js$','*','.txt$','.md$']
-"let NERDTreeWinPos = "right"
 nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 " Tagbar
