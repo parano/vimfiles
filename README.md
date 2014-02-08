@@ -11,6 +11,7 @@ git clone git://github.com/parano/vimfiles.git ~/.vim
 ```
 
 Create link for ```.vimrc```.
+```ln -s .vim/vimrc .vimrc```
 
 
 Install bundled plugins.
