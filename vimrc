@@ -77,6 +77,8 @@ if has("gui_running")
     if s:uname == "Darwin"
       set go=aAce  " remove toolbar
       set guifont=Monaco:h13
+      set guioptions-=r " Removes right hand scroll bar
+
       noremap <D-M-Left> :tabprevious<cr>
       noremap <D-M-Right> :tabnext<cr>
       map <D-1> 1gt
@@ -94,6 +96,7 @@ if has("gui_running")
           hi normal guibg=black
           set transp=8
       endif
+      color codeschool
     endif
   endif
 else
