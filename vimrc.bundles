@@ -38,6 +38,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/Arduino-syntax-file'
-Bundle 'skammer/vim-css-color'
 Bundle 'groenewege/vim-less'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle "sudar/vim-arduino-syntax"
+
