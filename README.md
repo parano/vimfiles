@@ -13,6 +13,12 @@ git clone git://github.com/parano/vimfiles.git ~/.vim
 Create link for ```.vimrc```.
 ```ln -s .vim/vimrc .vimrc```
 
+Set up Vundle:
+
+```
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+
 
 Install bundled plugins.
 ```
