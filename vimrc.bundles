@@ -37,5 +37,6 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/Arduino-syntax-file'
 Bundle 'groenewege/vim-less'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle "sudar/vim-arduino-syntax"
+Bundle 'sudar/vim-arduino-syntax'
+Bundle 'AndrewRadev/splitjoin.vim'
 

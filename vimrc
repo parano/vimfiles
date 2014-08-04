@@ -48,7 +48,7 @@ set smarttab
 set autoindent
 autocmd BufEnter *.md set filetype=markdown
 autocmd FileType markdown setlocal textwidth=80
-autocmd FileType html,css,haml,sass,scss,ruby,javascript,jade,coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
+autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,jade,coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
 autocmd FileType python set textwidth=0
 autocmd Syntax javascript set syntax=jquery 
 
