@@ -1,4 +1,6 @@
-/swaps/*
-/backups/*
+swaps/
+backups/
 bundle/
+.netrwhist
+
 

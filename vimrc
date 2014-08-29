@@ -209,6 +209,7 @@ imap <C-d> <Del>
 "imap <M-h> <C-w>
 imap <C-k> <C-r>=<SID>kill_line()<CR>
 
+
 function! s:home()
   let start_col = col('.')
   normal! ^
