@@ -115,7 +115,8 @@ else
     colorscheme my_ir_black
   else
     set t_Co=256
-    colorscheme my_ir_black
+    set background=dark
+    colorscheme solarized
   endif
 endif
 
