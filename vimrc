@@ -315,6 +315,9 @@ set pastetoggle=<F2>
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
 nnoremap <F7> :NumbersOnOff<CR>
 
+" GitGutter
+let g:gitgutter_max_signs = 100
+
 set encoding=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
