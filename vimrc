@@ -9,7 +9,6 @@ source ~/.vim/vimrc.bundles
 " Vundle required! 
 filetype plugin indent on 
 
-
 " turn on syntax highlighting
 syntax on
 
@@ -123,7 +122,9 @@ endif
 
 "set cursorline
 set laststatus=2
-let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
+"let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
+"let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-c> :nohls<CR><C-L>
@@ -232,7 +233,6 @@ imap <C-d> <Del>
 "imap <M-h> <C-w>
 imap <C-k> <C-r>=<SID>kill_line()<CR>
 
-
 function! s:home()
   let start_col = col('.')
   normal! ^
@@ -276,15 +276,12 @@ let g:tagbar_left=0
 let g:tagbar_width=30
 nmap <F6> :TagbarToggle<cr>
 
-let g:EasyMotion_leader_key = '<Leader>'
-
 nnoremap / /\v
 vnoremap / /\v
 
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
 let g:gundo_right=1
-
 
 """useful functions
 
@@ -318,6 +315,6 @@ set pastetoggle=<F2>
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
 nnoremap <F7> :NumbersOnOff<CR>
 
-set enc=utf-8
+set encoding=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5

@@ -1,8 +1,8 @@
 Bundle 'gmarik/vundle'
 
+" Editor Basis
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-sensible'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-endwise'
@@ -11,11 +11,16 @@ Bundle 'mileszs/ack.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Shougo/neocomplete'
 Bundle "myusuf3/numbers.vim"
+Bundle 'sjl/gundo.vim'
+Plugin 'bling/vim-airline'
+
+" Git related
+Plugin 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-fugitive'
 
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'docunext/closetag.vim'
 "Bundle 'Raimondi/delimitMate'
-"Bundle 'tpope/vim-fugitive'
 "Bundle 'vim-scripts/matchit.zip'
 "Bundle 'ervandew/supertab'
 "Bundle 'tpope/vim-surround'
@@ -23,7 +28,6 @@ Bundle "myusuf3/numbers.vim"
 "Bundle 'godlygeek/tabular'
 "Bundle 'epmatsw/ag.vim'
 "Bundle 'vim-scripts/sudo.vim'
-"Bundle 'sjl/gundo.vim'
 "Bundle 'gmarik/sudo-gui.vim'
 "Bundle 'amdt/vim-niji' 
 "Bundle 'terryma/vim-multiple-cursors'
@@ -35,12 +39,11 @@ Bundle "myusuf3/numbers.vim"
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
-"Bundle 'vim-scripts/c.vim'
-"Bundle 'nono/jquery.vim'
-"Bundle 'tpope/vim-rails'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'groenewege/vim-less'
-"Bundle 'sudar/vim-arduino-syntax'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'nono/jquery.vim'
+"Bundle 'sudar/vim-arduino-syntax'
 "Bundle 'derekwyatt/vim-scala'
-"Bundle 'vim-scripts/nginx.vim'
+""Bundle 'vim-scripts/c.vim'
+"Bundle 'tpope/vim-rails'Bundle 'vim-scripts/nginx.vim'
