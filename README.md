@@ -1,8 +1,6 @@
 Vimfiles
 ================
-JavaScript/Scala centric vimfiles and installer
-
-
+JavaScript/Scala/Ruby centric vimfiles and installer
 
 ## Quick Install ##
 
@@ -59,10 +57,7 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 * Neocomplete requires Vim 7.3.885+ with Lua enabled. Refer to
 [Neocomplete.vim](https://github.com/Shougo/neocomplete.vim) for more
 installation instructions. For Mac users, a simple way to do that is override
-the system vim via this command:
-```
-brew install vim --with-lua --override-system-vim
-```
+the system vim via this command: ``` brew install vim --with-lua --override-system-vim ```
 
 * To have a nicer looking status bar, pick and install a font from [Powerline
 Fonts](https://github.com/Lokaltog/powerline-fonts) and patch it to your
