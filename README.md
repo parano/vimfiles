@@ -50,6 +50,17 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 * F4 - GundoToggle
 * F5 - NERDTreeToggle
 * F6 - TagbarToggle
+* F7 - Toggle Numbers
+
+## Note
+
+Neocomplete requires Vim 7.3.885+ with Lua enabled. Refer to
+[Neocomplete.vim](https://github.com/Shougo/neocomplete.vim) for more
+installation instructions. For Mac users, a simple way to do that is override
+the system vim via this command:
+```
+brew install vim --with-lua --override-system-vim
+```
 
 ## ##  
 have fun ;-)
