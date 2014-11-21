@@ -9,10 +9,14 @@ Bundle 'tpope/vim-endwise'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'Shougo/neocomplete'
 Bundle "myusuf3/numbers.vim"
 Bundle 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
+
+" Auto complete
+Bundle 'Shougo/neocomplete'
+Bundle 'Shougo/neosnippet.git'
+Bundle 'honza/vim-snippets'
 
 " Git related
 Plugin 'airblade/vim-gitgutter'
@@ -32,10 +36,11 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'amdt/vim-niji' 
 "Bundle 'terryma/vim-multiple-cursors'
 "Bundle 'AndrewRadev/splitjoin.vim'
-"Bundle 'Shougo/neosnippet.git'
-"Bundle 'honza/vim-snippets'
+
 
 " language/library/syntax related
+Bundle 'derekwyatt/vim-scala'
+Bundle 'mpollmeier/vim-scalaConceal'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
@@ -44,6 +49,5 @@ Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'nono/jquery.vim'
 "Bundle 'sudar/vim-arduino-syntax'
-"Bundle 'derekwyatt/vim-scala'
 ""Bundle 'vim-scripts/c.vim'
 "Bundle 'tpope/vim-rails'Bundle 'vim-scripts/nginx.vim'
