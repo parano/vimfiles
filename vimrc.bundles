@@ -1,11 +1,10 @@
 Bundle 'gmarik/vundle'
 
 " Editor Basis
+Bundle 'tpope/vim-sensible'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-sensible'
 Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-endwise'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/rainbow_parentheses.vim'
@@ -13,30 +12,19 @@ Bundle "myusuf3/numbers.vim"
 Bundle 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
+Bundle 'AndrewRadev/splitjoin.vim'
 
-" Auto complete
+" Code auto complete
 Bundle 'Shougo/neocomplete'
 Bundle 'Shougo/neosnippet.git'
 Bundle 'honza/vim-snippets'
 
+" Auto completion for quotes, parens, brackets
+Bundle 'Raimondi/delimitMate'
+
 " Git related
 Plugin 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
-
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Bundle 'docunext/closetag.vim'
-"Bundle 'Raimondi/delimitMate'
-"Bundle 'vim-scripts/matchit.zip'
-"Bundle 'ervandew/supertab'
-"Bundle 'tpope/vim-surround'
-"Bundle 'godlygeek/tabular'
-"Bundle 'epmatsw/ag.vim'
-"Bundle 'vim-scripts/sudo.vim'
-"Bundle 'gmarik/sudo-gui.vim'
-"Bundle 'amdt/vim-niji' 
-"Bundle 'terryma/vim-multiple-cursors'
-"Bundle 'AndrewRadev/splitjoin.vim'
-
 
 " language/library/syntax related
 Bundle 'derekwyatt/vim-scala'
@@ -49,5 +37,24 @@ Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'nono/jquery.vim'
 "Bundle 'sudar/vim-arduino-syntax'
-""Bundle 'vim-scripts/c.vim'
+"Bundle 'vim-scripts/c.vim'
 "Bundle 'tpope/vim-rails'Bundle 'vim-scripts/nginx.vim'
+
+" Ruby - Add end wisely
+Bundle 'tpope/vim-endwise'
+
+" HTML expansion
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+
+" Unused
+"Bundle 'docunext/closetag.vim'
+"Bundle 'vim-scripts/matchit.zip'
+"Bundle 'ervandew/supertab'
+"Bundle 'tpope/vim-surround'
+"Bundle 'godlygeek/tabular'
+"Bundle 'epmatsw/ag.vim'
+"Bundle 'vim-scripts/sudo.vim'
+"Bundle 'gmarik/sudo-gui.vim'
+"Bundle 'amdt/vim-niji' 
+"Bundle 'terryma/vim-multiple-cursors'
