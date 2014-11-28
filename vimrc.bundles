@@ -12,6 +12,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle "myusuf3/numbers.vim"
 Bundle 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
+Bundle 'scrooloose/syntastic'
 
 " Auto complete
 Bundle 'Shougo/neocomplete'
@@ -28,7 +29,6 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'vim-scripts/matchit.zip'
 "Bundle 'ervandew/supertab'
 "Bundle 'tpope/vim-surround'
-"Bundle 'scrooloose/syntastic'
 "Bundle 'godlygeek/tabular'
 "Bundle 'epmatsw/ag.vim'
 "Bundle 'vim-scripts/sudo.vim'
