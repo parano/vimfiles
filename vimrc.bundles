@@ -9,7 +9,6 @@ Bundle 'tpope/vim-endwise'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle "myusuf3/numbers.vim"
 Bundle 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
 
@@ -22,6 +21,7 @@ Bundle 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 
+"Bundle "myusuf3/numbers.vim"
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'docunext/closetag.vim'
 "Bundle 'Raimondi/delimitMate'
