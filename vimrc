@@ -274,8 +274,8 @@ let g:tagbar_left=0
 let g:tagbar_width=30
 nmap <F6> :TagbarToggle<cr>
 
-nnoremap / /\v
-vnoremap / /\v
+nnoremap / /\v\c
+vnoremap / /\v\c
 
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
