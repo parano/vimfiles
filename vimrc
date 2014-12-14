@@ -142,8 +142,8 @@ set hidden
 
 map <F1> <Esc>:w<CR>
 imap <F1> <Esc>:w<CR>
-map <F8> <Esc>:checktime<CR>
-imap <F8> <Esc>:checktime<CR>
+map <F7> <Esc>:checktime<CR>
+imap <F7> <Esc>:checktime<CR>
 map <C-r> :Errors<CR>
 
 " ctrlp
@@ -265,9 +265,6 @@ endfunction
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
-
-let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
-nnoremap <F7> :NumbersOnOff<CR>
 
 " GitGutter
 let g:gitgutter_max_signs = 100
