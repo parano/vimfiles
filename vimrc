@@ -142,6 +142,8 @@ set hidden
 
 map <F1> <Esc>:w<CR>
 imap <F1> <Esc>:w<CR>
+map <F8> <Esc>:checktime<CR>
+imap <F8> <Esc>:checktime<CR>
 map <C-r> :Errors<CR>
 
 " ctrlp
