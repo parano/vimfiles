@@ -54,68 +54,22 @@ autocmd Syntax javascript set syntax=jquery
 " some stuff to get the mouse going in term
 set mouse=a
 
-if has("gui_macvim")
-    set mecmeta
-endif
-
-" colors, fonts
 if has("gui_running")
-  "tell the term has 256 colors
   set t_Co=256
-
-  if has("gui_gnome")
-    set t_Co=256
-    set term=gnome-256color
-    colorscheme railscasts
-    set guifont=Monospace\ Bold\ 12
-  endif
-
-  if has("gui_win32") || has("gui_win32s")
-    set guifont=Consolas:h12
-    set enc=utf-8
-  endif
-
-  if has("unix")
-    let s:uname = system("uname -s")
-    if s:uname == "Darwin"
-      set go=aAce  " remove toolbar
-      set guifont=Monaco:h13
-      set guioptions-=r " Removes right hand scroll bar
-
-      noremap <D-M-Left> :tabprevious<cr>
-      noremap <D-M-Right> :tabnext<cr>
-      map <D-1> 1gt
-      map <D-2> 2gt
-      map <D-3> 3gt
-      map <D-4> 4gt
-      map <D-5> 5gt
-      map <D-6> 6gt
-      map <D-7> 7gt
-      map <D-8> 8gt
-      map <D-9> 9gt
-      map <D-0> :tablast<CR>
-      set bg=dark
-      if &background == "dark"
-          hi normal guibg=black
-          set transp=8
-      endif
-      color codeschool
-    endif
-  endif
+  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
+  set guioptions-=r " Removes right hand scroll bar
+  set background=dark
+  colorscheme wombat
 else
-  "dont load csapprox if there is no gui support - silences an annoying warning
-  let g:CSApprox_loaded = 1
-
   if $COLORTERM == 'gnome-terminal'
     "set term=gnome-256color
     "set term=ansi
     set t_Co=256
-    "set background=dark
+    set background=dark
     colorscheme my_ir_black
   else
     set t_Co=256
-    "set background=dark
-    "colorscheme solarized
+    set background=dark
     colorscheme my_ir_black
   endif
 endif
