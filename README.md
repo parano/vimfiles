@@ -29,6 +29,12 @@ Install bundled plugins
 vim +BundleInstall +qall
 ```
 
+
+Build vimproc
+```
+cd ~/.vim/bundle/vimproc.vim && make
+```
+
 Create ```~/.vim/swaps``` and ```~/.vim/backups```.
 
 ``` 

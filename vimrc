@@ -147,7 +147,8 @@ imap <F7> <Esc>:checktime<CR>
 map <F8> <Esc>:Errors<CR>
 
 " ctrlp
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = ',t'
+let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$',
@@ -236,6 +237,7 @@ vnoremap / /\v\c
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
 let g:gundo_right=1
+let g:gundo_width=60
 
 """useful functions
 
@@ -269,9 +271,32 @@ set pastetoggle=<F2>
 " GitGutter
 let g:gitgutter_max_signs = 100
 
+" vim indent guides
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 4
+
+" Unite
+let g:unite_source_history_yank_enable = 1
+let s:unite_source = {'name': 'colorscheme', }
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
+nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+nnoremap <leader>c :Unite grep:.<cr>
+
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Play nice with supertab
+  let b:SuperTabDisabled=1
+  " Enable navigation with control-j and control-k in insert mode
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+endfunction
 
 set encoding=utf-8
 set fenc=utf-8
