@@ -12,6 +12,7 @@ Bundle 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
 Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Code auto complete
 Bundle 'Shougo/neocomplete'

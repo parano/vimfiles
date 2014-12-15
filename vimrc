@@ -144,7 +144,7 @@ map <F1> <Esc>:w<CR>
 imap <F1> <Esc>:w<CR>
 map <F7> <Esc>:checktime<CR>
 imap <F7> <Esc>:checktime<CR>
-map <C-r> :Errors<CR>
+map <F8> <Esc>:Errors<CR>
 
 " ctrlp
 let g:ctrlp_map = '<c-p>'
@@ -268,6 +268,10 @@ set pastetoggle=<F2>
 
 " GitGutter
 let g:gitgutter_max_signs = 100
+
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 4
 
 set encoding=utf-8
 set fenc=utf-8

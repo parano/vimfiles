@@ -56,7 +56,8 @@ brew install ctags ack
 * F4 - GundoToggle
 * F5 - NERDTreeToggle
 * F6 - TagbarToggle
-* F7 - Checktime
+* F7 - Checktime - reload files
+* F8 - Show errors
 
 ## Notes
 
