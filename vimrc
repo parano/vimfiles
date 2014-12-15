@@ -148,7 +148,6 @@ map <F8> <Esc>:Errors<CR>
 
 " ctrlp
 let g:ctrlp_map = ',t'
-let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$',
@@ -280,7 +279,7 @@ let g:indent_guides_guide_size = 4
 let g:unite_source_history_yank_enable = 1
 let s:unite_source = {'name': 'colorscheme', }
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+"nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
 nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
 nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
