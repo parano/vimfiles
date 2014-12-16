@@ -55,23 +55,23 @@ autocmd Syntax javascript set syntax=jquery
 set mouse=a
 
 if has("gui_running")
-  set t_Co=256
-  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
-  set guioptions-=r " Removes right hand scroll bar
-  set background=dark
-  colorscheme wombat
+    set t_Co=256
+    set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
+    set guioptions-=r " Removes right hand scroll bar
+    set background=dark
+    colorscheme wombat
 else
-  if $COLORTERM == 'gnome-terminal'
-    "set term=gnome-256color
-    "set term=ansi
-    set t_Co=256
-    set background=dark
-    colorscheme my_ir_black
-  else
-    set t_Co=256
-    set background=dark
-    colorscheme my_ir_black
-  endif
+    if $COLORTERM == 'gnome-terminal'
+        "set term=gnome-256color
+        "set term=ansi
+        set t_Co=256
+        set background=dark
+        colorscheme my_ir_black
+    else
+        set t_Co=256
+        set background=dark
+        colorscheme my_ir_black
+    endif
 endif
 
 "set cursorline
@@ -100,9 +100,9 @@ inoremap <expr><C-l>     neocomplete#complete_common_string()
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-  return neocomplete#close_popup() . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+    return neocomplete#close_popup() . "\<CR>"
+    " For no inserting <CR> key.
+    "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -126,15 +126,15 @@ xmap <C-i>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: "\<TAB>"
 
 " For snippet_complete marker.
 if has('conceal')
-  set conceallevel=2 concealcursor=i
+    set conceallevel=2 concealcursor=i
 endif
 
 "hide buffers when not displayed
@@ -150,10 +150,10 @@ map <F8> <Esc>:Errors<CR>
 let g:ctrlp_map = ',t'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-      \ 'file': '\.exe$\|\.so$\|\.dll$',
-      \ 'link': 'some_bad_symbolic_links',
-      \ }
+            \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+            \ 'file': '\.exe$\|\.so$\|\.dll$',
+            \ 'link': 'some_bad_symbolic_links',
+            \ }
 
 " key mapping for window navigation
 map <C-h> <C-w>h
@@ -169,10 +169,10 @@ nmap <Tab> gt
 nmap <S-Tab> gT
 
 " key mapping for textmate-like indentation
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
+nmap <M-[> <<
+nmap <M-]> >>
+vmap <M-[> <gv
+vmap <M-]> >gv
 
 " emacs keybinding
 imap <C-b> <Left>
@@ -188,29 +188,29 @@ imap <C-d> <Del>
 imap <C-k> <C-r>=<SID>kill_line()<CR>
 
 function! s:home()
-  let start_col = col('.')
-  normal! ^
-  if col('.') == start_col
-    normal! 0
-  endif
-  return ''
+    let start_col = col('.')
+    normal! ^
+    if col('.') == start_col
+        normal! 0
+    endif
+    return ''
 endfunction
 
 function! s:kill_line()
-  let [text_before_cursor, text_after_cursor] = s:split_line_text_at_cursor()
-  if len(text_after_cursor) == 0
-    normal! J
-  else
-    call setline(line('.'), text_before_cursor)
-  endif
-  return ''
+    let [text_before_cursor, text_after_cursor] = s:split_line_text_at_cursor()
+    if len(text_after_cursor) == 0
+        normal! J
+    else
+        call setline(line('.'), text_before_cursor)
+    endif
+    return ''
 endfunction
 
 function! s:split_line_text_at_cursor()
-  let line_text = getline(line('.'))
-  let text_after_cursor  = line_text[col('.')-1 :]
-  let text_before_cursor = (col('.') > 1) ? line_text[: col('.')-2] : ''
-  return [text_before_cursor, text_after_cursor]
+    let line_text = getline(line('.'))
+    let text_after_cursor  = line_text[col('.')-1 :]
+    let text_before_cursor = (col('.') > 1) ? line_text[: col('.')-2] : ''
+    return [text_before_cursor, text_after_cursor]
 endfunction
 
 "use ; to issue a command"
@@ -242,10 +242,10 @@ let g:gundo_width=60
 
 "visual search mappings
 function! s:VSetSearch()
-  let temp = @@
-  norm! gvy
-  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
-  let @@ = temp
+    let temp = @@
+    norm! gvy
+    let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+    let @@ = temp
 endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
@@ -254,12 +254,12 @@ vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 ""dont do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()
 function! SetCursorPosition()
-  if &filetype !~ 'commit\c'
-    if line("'\"") > 0 && line("'\"") <= line("$")
-      exe "normal! g`\""
-      normal! zz
-    endif
-  end
+    if &filetype !~ 'commit\c'
+        if line("'\"") > 0 && line("'\"") <= line("$")
+            exe "normal! g`\""
+            normal! zz
+        endif
+    end
 endfunction
 
 " toggle paste mode
@@ -290,11 +290,11 @@ nnoremap <leader>c :Unite grep:.<cr>
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
-  " Play nice with supertab
-  let b:SuperTabDisabled=1
-  " Enable navigation with control-j and control-k in insert mode
-  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+    " Play nice with supertab
+    let b:SuperTabDisabled=1
+    " Enable navigation with control-j and control-k in insert mode
+    imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+    imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
 endfunction
 
 set encoding=utf-8
