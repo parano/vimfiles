@@ -297,6 +297,11 @@ function! s:unite_settings()
     imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
 endfunction
 
+" easier buffer
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
 set encoding=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
