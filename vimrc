@@ -250,6 +250,11 @@ endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
+" copy yanked text to clipboard
+vnoremap <C-c> "+y
+
 "jump to last cursor position when opening a file
 ""dont do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()
