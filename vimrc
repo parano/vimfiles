@@ -152,7 +152,7 @@ let g:ctrlp_map = ',t'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
             \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-            \ 'file': '\.exe$\|\.so$\|\.dll$',
+            \ 'file': '\.exe$\|\.so$\|\.dll$\.jsx.js$',
             \ 'link': 'some_bad_symbolic_links',
             \ }
 
@@ -222,7 +222,7 @@ let mapleader=","
 let NERDChristmasTree=1
 let NERDTreeWinSize=25
 let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.swp$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.swp$', '\.jsx.js$']
 let NERDTreeSortOrder=['\/$','\.rb$','\.py$','\.c$','\.js$','*','.txt$','.md$']
 nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
 
