@@ -313,6 +313,9 @@ set noerrorbells
 set novisualbell
 set visualbell t_vb=
 
+" auto save session
+let g:session_autosave = 'yes'
+
 set encoding=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5

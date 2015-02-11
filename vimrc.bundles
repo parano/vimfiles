@@ -16,6 +16,8 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/neomru.vim'
 Bundle 'Shougo/vimproc.vim'
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
 
 " Code auto complete
 Bundle 'Shougo/neocomplete'
