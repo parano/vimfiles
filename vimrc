@@ -274,7 +274,7 @@ imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " GitGutter
-let g:gitgutter_max_signs = 100
+let g:gitgutter_max_signs = 1000
 
 " vim indent guides
 let g:indent_guides_auto_colors = 1
@@ -307,6 +307,11 @@ endfunction
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
+
+" disable visual bell
+set noerrorbells
+set novisualbell
+set visualbell t_vb=
 
 set encoding=utf-8
 set fenc=utf-8
