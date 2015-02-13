@@ -150,11 +150,16 @@ map <F8> <Esc>:Errors<CR>
 " ctrlp
 let g:ctrlp_map = ',t'
 let g:ctrlp_working_path_mode = 2
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
 let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-            \ 'file': '\.exe$\|\.so$\|\.dll$\.jsx.js$',
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll)$',
             \ 'link': 'some_bad_symbolic_links',
             \ }
+
+set ignorecase
 
 " key mapping for window navigation
 map <C-h> <C-w>h
@@ -288,7 +293,6 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 "nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
 nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
-nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
 nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
 nnoremap <leader>c :Unite grep:.<cr>
@@ -315,6 +319,7 @@ set visualbell t_vb=
 
 " auto save session
 let g:session_autosave = 'yes'
+let g:session_autoload = 'no'
 
 set encoding=utf-8
 set fenc=utf-8
