@@ -230,6 +230,8 @@ let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.swp$', '\.jsx.js$']
 let NERDTreeSortOrder=['\/$','\.rb$','\.py$','\.c$','\.js$','*','.txt$','.md$']
 nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
+" close vim if the only window left is nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Tagbar
 let g:tagbar_left=0
