@@ -323,6 +323,9 @@ set visualbell t_vb=
 let g:session_autosave = 'yes'
 let g:session_autoload = 'no'
 
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%101v', 100)
+
 set encoding=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
