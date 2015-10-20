@@ -326,6 +326,12 @@ let g:session_autoload = 'no'
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%101v', 100)
 
+" When I first heard of this shortcut from @yubozhao, I feel like a big peel off potato
+" A potato: potato
+" A big potato: POTATO
+" A big peel off potato: OTATO
+inoremap kj <Esc>
+
 set encoding=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
