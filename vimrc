@@ -276,37 +276,9 @@ function! SetCursorPosition()
     end
 endfunction
 
-" JavaScript section
-au FileType javascript call JavaScriptFold()
-au FileType javascript setl fen
-au FileType javascript setl nocindent
-
-au FileType javascript imap <c-t> console.log();<esc>hi
-au FileType javascript imap <c-a> alert();<esc>hi
-
-au FileType javascript inoremap <buffer> $r return 
-au FileType javascript inoremap <buffer> $f //--- PH ----------------------------------------------<esc>FP2xi
-
-function! JavaScriptFold() 
-    setl foldmethod=syntax
-    setl foldlevelstart=1
-    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-
-    function! FoldText()
-        return substitute(getline(v:foldstart), '{.*', '{...}', '')
-    endfunction
-    setl foldtext=FoldText()
-endfunction
-
 " press SPACE to fold/unfold
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
-
-" short cut for folding
-inoremap <C-L> <C-O>za
-nnoremap <C-L> za
-onoremap <C-L> <C-C>za
-vnoremap <C-L> zf
 
 " toggle paste mode
 nnoremap <F2> :set invpaste paste?<CR>
