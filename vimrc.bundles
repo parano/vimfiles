@@ -20,6 +20,7 @@ Bundle 'Shougo/vimproc.vim'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
 Plugin 'vim-scripts/restore_view.vim'
+Plugin 'google/vim-ft-bzl'
 
 " Code auto complete
 Bundle 'Shougo/neocomplete'

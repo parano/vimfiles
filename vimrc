@@ -48,8 +48,8 @@ set smarttab
 set autoindent
 autocmd BufEnter *.md set filetype=markdown
 autocmd FileType markdown setlocal textwidth=80
-autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,jade,jsx,coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
-autocmd FileType python set textwidth=0
+autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,jade,jsx,coffee,python,bzl setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
+"autocmd FileType python set textwidth=0
 autocmd Syntax javascript set syntax=jquery 
 autocmd BufEnter *.jsx set filetype=javascript
 
@@ -340,3 +340,6 @@ inoremap kj <Esc>
 set encoding=utf-8
 set fenc=utf-8
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
+
+" the same as autochdir
+autocmd BufEnter * silent! lcd %:p:h
