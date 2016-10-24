@@ -78,8 +78,8 @@ endif
 
 "set cursorline
 set laststatus=2
-"let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
+let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 
 "make <c-l> clear the highlight as well as redraw
@@ -118,8 +118,12 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
 
+let g:neosnippet#disable_runtime_snippets = {
+            \   '_' : 1,
+            \ }
+
 " Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+let g:neosnippet#snippets_directory="~/.vim/bundle/vim-snippets/snippets/"
 
 " Plugin key-mappings.
 imap <C-i>     <Plug>(neosnippet_expand_or_jump)
@@ -134,9 +138,12 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
             \ "\<Plug>(neosnippet_expand_or_jump)"
             \: "\<TAB>"
 
+"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"            \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
 " For snippet_complete marker.
 if has('conceal')
-    set conceallevel=2 concealcursor=i
+    set conceallevel=2 concealcursor=niv
 endif
 
 "hide buffers when not displayed
@@ -235,7 +242,7 @@ nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Tagbar
-let g:tagbar_left=0
+let g:tagbar_left=1
 let g:tagbar_width=30
 nmap <F6> :TagbarToggle<cr>
 
@@ -331,10 +338,6 @@ let g:session_autoload = 'no'
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%101v', 100)
 
-" When I first heard of this shortcut from @yubozhao, I feel like a big peel off potato
-" A potato: potato
-" A big potato: POTATO
-" A big peel off potato: OTATO
 inoremap kj <Esc>
 
 set encoding=utf-8

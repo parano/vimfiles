@@ -32,7 +32,7 @@ Bundle 'Raimondi/delimitMate'
 
 " Git related
 Plugin 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 
 " language/library/syntax related
 Bundle 'derekwyatt/vim-scala'
@@ -40,7 +40,7 @@ Bundle 'mpollmeier/vim-scalaConceal'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'pangloss/vim-javascript'
 Plugin 'isRuslan/vim-es6'
-Bundle 'kchmck/vim-coffee-script'
+"Bundle 'kchmck/vim-coffee-script'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
@@ -54,7 +54,7 @@ Bundle "alunny/pegjs-vim"
 "Bundle 'tpope/vim-rails'Bundle 'vim-scripts/nginx.vim'
 
 " Ruby - Add end wisely
-Bundle 'tpope/vim-endwise'
+"Bundle 'tpope/vim-endwise'
 
 " HTML expansion
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}

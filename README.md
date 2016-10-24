@@ -50,8 +50,14 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 
 For Mac users, simply do
 ``` 
-brew install vim --with-lua --override-system-vim 
+brew install vim --with-lua --with-override-system-vim 
 brew install ctags ack 
+```
+
+Mac Vim:
+```
+brew install macvim --with-cscope --with-lua --with-override-system-vim 
+brew linkapps macvim
 ```
 
 ## Key Bindings
