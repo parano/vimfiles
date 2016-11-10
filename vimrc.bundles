@@ -5,10 +5,10 @@ Bundle 'tpope/vim-sensible'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
-Bundle 'kien/rainbow_parentheses.vim'
+" Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
@@ -26,6 +26,7 @@ Plugin 'google/vim-ft-bzl'
 Bundle 'Shougo/neocomplete'
 Bundle 'Shougo/neosnippet.git'
 Bundle 'honza/vim-snippets'
+Plugin 'vim-scripts/SyntaxComplete'
 
 " Auto completion for quotes, parens, brackets
 Bundle 'Raimondi/delimitMate'
@@ -37,28 +38,37 @@ Plugin 'airblade/vim-gitgutter'
 " language/library/syntax related
 Bundle 'derekwyatt/vim-scala'
 Bundle 'mpollmeier/vim-scalaConceal'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'pangloss/vim-javascript'
-Plugin 'isRuslan/vim-es6'
-"Bundle 'kchmck/vim-coffee-script'
+
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'isRuslan/vim-es6'
+
+Plugin 'othree/yajs.vim'
+Bundle 'othree/es.next.syntax.vim'
+Bundle 'othree/jsdoc-syntax.vim'
+Plugin 'othree/html5.vim'
+
+Bundle 'mxw/vim-jsx'
+
+Plugin 'elzr/vim-json'
+Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
-Bundle 'nono/jquery.vim'
-Bundle 'mxw/vim-jsx'
-Plugin 'othree/html5.vim'
-Bundle "leafgarland/typescript-vim"
-Bundle "alunny/pegjs-vim"
+"Bundle 'nono/jquery.vim'
+"Bundle 'kchmck/vim-coffee-script'
+"Bundle "leafgarland/typescript-vim"
+"Bundle "alunny/pegjs-vim"
 "Bundle 'sudar/vim-arduino-syntax'
 "Bundle 'vim-scripts/c.vim'
-"Bundle 'tpope/vim-rails'Bundle 'vim-scripts/nginx.vim'
+"Bundle 'tpope/vim-rails'
+"Bundle 'vim-scripts/nginx.vim'
+"Bundle 'vim-ruby/vim-ruby'
 
-" Ruby - Add end wisely
+" Ruby - end wisely
 "Bundle 'tpope/vim-endwise'
 
 " HTML expansion
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Unused
 "Bundle 'vim-scripts/matchit.zip'

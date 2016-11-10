@@ -50,8 +50,8 @@ autocmd BufEnter *.md set filetype=markdown
 autocmd FileType markdown setlocal textwidth=80
 autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,jade,jsx,coffee,python,bzl setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
 "autocmd FileType python set textwidth=0
-autocmd Syntax javascript set syntax=jquery 
-autocmd BufEnter *.jsx set filetype=javascript
+
+let g:syntastic_javascript_checkers = ['eslint']
 
 " some stuff to get the mouse going in term
 set mouse=a
@@ -336,6 +336,15 @@ let g:session_autosave = 'yes'
 let g:session_autoload = 'no'
 
 highlight ColorColumn ctermbg=magenta
+
+" js
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_react = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_chai = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_flux = 1
+
 call matchadd('ColorColumn', '\%101v', 100)
 
 inoremap kj <Esc>
