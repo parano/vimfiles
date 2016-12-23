@@ -28,7 +28,7 @@ pip2 install neovim
 pip3 install neovim
 ```
 
-link newvim config files:
+link neovim config files:
 ```
 mkdir ~/.config
 ln -s ~/.vim ~/.config/nvim
@@ -64,8 +64,6 @@ npm install -g tern
 ```
 
 
-
-
 ### Trouble shotting
 
-Having problem with <C-h>? see https://github.com/neovim/neovim/issues/2048
+Having problem with `<C-h>`? see https://github.com/neovim/neovim/issues/2048
