@@ -108,12 +108,6 @@ autocmd FileType markdown setlocal textwidth=80
 autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,jade,jsx,coffee,python,bzl setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
 autocmd FileType python set textwidth=0
 
-"set cursorline
-set laststatus=2
-let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
-let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
-
 " search better
 nnoremap / /\v\c
 vnoremap / /\v\c
@@ -157,45 +151,6 @@ nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" emacs keybinding
-imap <C-b> <Left>
-imap <C-f> <Right>
-imap <C-a> <C-o>:call <SID>home()<CR>
-imap <C-e> <End>
-"imap <M-b> <C-o>b
-"imap <M-f> <C-o>e<Right>
-imap <C-d> <Del>
-"imap <C-h> <BS>
-"imap <M-d> <C-o>de
-"imap <M-h> <C-w>
-imap <C-k> <C-r>=<SID>kill_line()<CR>
-
-function! s:home()
-    let start_col = col('.')
-    normal! ^
-    if col('.') == start_col
-        normal! 0
-    endif
-    return ''
-endfunction
-
-function! s:kill_line()
-    let [text_before_cursor, text_after_cursor] = s:split_line_text_at_cursor()
-    if len(text_after_cursor) == 0
-        normal! J
-    else
-        call setline(line('.'), text_before_cursor)
-    endif
-    return ''
-endfunction
-
-function! s:split_line_text_at_cursor()
-    let line_text = getline(line('.'))
-    let text_after_cursor  = line_text[col('.')-1 :]
-    let text_before_cursor = (col('.') > 1) ? line_text[: col('.')-2] : ''
-    return [text_before_cursor, text_after_cursor]
-endfunction
-
 "visual search mappings
 function! s:VSetSearch()
     let temp = @@
@@ -206,53 +161,6 @@ endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
-" Nerd Tree 
-let NERDChristmasTree=1
-let NERDTreeWinSize=25
-let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\~$', '\.git$', '\.swp$', '\.jsx.js$']
-let NERDTreeSortOrder=['\/$','\.rb$','\.py$','\.c$','\.js$','*','.txt$','.md$']
-nnoremap <silent> <F5> :execute 'NERDTreeToggle ' . getcwd()<CR>
-" close vim if the only window left is nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" GitGutter
-let g:gitgutter_max_signs = 1000
-
-" Denite
-" Change ignore_globs
-call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
-  \ [ '.git/', '*.swp$/', '__pycache__/',
-  \   '.jsx.js$', 'images/', '*.min.*', 'img/', 'fonts/'])
-
-" Change mappings.
-call denite#custom#map(
-  \ 'insert',
-  \ '<C-j>',
-  \ '<denite:move_to_next_line>',
-  \ 'noremap'
-  \)
-call denite#custom#map(
-  \ 'insert',
-  \ '<C-k>',
-  \ '<denite:move_to_previous_line>',
-  \ 'noremap'
-  \)
-
-" Change file_rec command.
-call denite#custom#var('file_rec', 'command',
-  \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
-
-" Define alias
-call denite#custom#alias('source', 'file_rec/git', 'file_rec')
-call denite#custom#var('file_rec/git', 'command',
-  \ ['git', 'ls-tree', '-r', '--name-only', 'HEAD', '--', ':/'])
-
-" search git repo
-noremap <leader>t :<C-u>Denite file_rec/git<cr>
-" search buffer
-noremap <leader>b :<C-u>Denite buffer<cr>
-" search with grep
-noremap <leader>f :<C-u>Denite grep<cr>
-" search current folder
-noremap <leader>c :<C-u>Denite file_rec<cr>
+inoremap jj <Esc><Esc>
+inoremap jk <Esc><Esc>
+inoremap kj <Esc><Esc>
