@@ -256,5 +256,3 @@ noremap <leader>b :<C-u>Denite buffer<cr>
 noremap <leader>f :<C-u>Denite grep<cr>
 " search current folder
 noremap <leader>c :<C-u>Denite file_rec<cr>
-
-"autocmd BufWritePost *.scala silent :EnTypeCheck

@@ -9,10 +9,10 @@ git clone git://github.com/parano/vimfiles.git ~/.vim
 ### Vim/MacVim Installation (Macos)
 
 ``` 
-brew install vim --with-lua --with-python3 --with-override-system-vim 
+brew install vim --with-lua --with-python3 --with-override-system-vi
 ```
 ```
-brew install macvim --with-lua --with-override-system-vim
+brew install macvim --with-lua --with-python3 --with-override-system-vim
 brew linkapps macvim
 ```
 
@@ -41,6 +41,11 @@ Install plug.vim
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Install Dependencies:
+``` 
+brew install the_silver_searcher
 ```
 
 Create folders for backup files
