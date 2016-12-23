@@ -53,7 +53,7 @@ Create folders for backup files
 mkdir -p ~/.vim/swaps ~/.vim/backups 
 ```
 
-Run `:PlugInstall` to install plugins.
+Run `:PlugInstall` and `:UpdateRemotePlugins` to install plugins.
 
 For Javascript/Python auto-complete:
 ```

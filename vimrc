@@ -11,6 +11,8 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'shougo/denite.nvim'
 
+Plug 'vim-syntastic/syntastic'
+
 " Code auto completion
 Plug 'Shougo/deoplete.nvim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
@@ -20,7 +22,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'Raimondi/delimitMate'
 
 " scala
-Plug 'derekwyatt/vim-scala' , {'for' : 'scala'}
+Plug 'derekwyatt/vim-scala', {'for' : 'scala'}
 "Plug 'ensime/ensime-vim'
 
 " javascript
