@@ -13,7 +13,7 @@ Plug 'shougo/denite.nvim'
 
 " Code auto completion
 Plug 'Shougo/deoplete.nvim'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
 Plug 'zchee/deoplete-jedi'
 
 " Auto completion for quotes, parens, brackets
@@ -24,17 +24,16 @@ Plug 'derekwyatt/vim-scala' , {'for' : 'scala'}
 "Plug 'ensime/ensime-vim'
 
 " javascript
-Plug 'othree/yajs.vim'
-Plug 'othree/es.next.syntax.vim'
-Plug 'othree/jsdoc-syntax.vim'
-Plug 'othree/html5.vim'
-
-Plug 'mxw/vim-jsx'
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jsdoc-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/html5.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'elzr/vim-json'
-Plug 'othree/javascript-libraries-syntax.vim'
 
 " Bazel
-Plug 'google/vim-ft-bzl'
+Plug 'google/vim-ft-bzl', { 'for': ['bzl'] }
 
 call plug#end()
 
