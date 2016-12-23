@@ -155,8 +155,3 @@ set pastetoggle=<F2>
 inoremap jj <Esc><Esc>
 inoremap jk <Esc><Esc>
 inoremap kj <Esc><Esc>
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-" Use smartcase.
-let g:deoplete#enable_smart_case = 1
