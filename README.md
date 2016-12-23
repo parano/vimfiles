@@ -1,85 +1,53 @@
-Vimfiles
-================
-JavaScript/Scala/Ruby centric vimfiles and installer
+myVimfiles
+==============
 
-## Quick Install ##
-
-Clone this repo into ```~/.vim```
-
-``` 
-git clone git://github.com/parano/vimfiles.git ~/.vim 
+Clone this repo:
+```
+git clone git://github.com/parano/vimfiles.git ~/.vim
 ```
 
-Create link for ```~/.vimrc```
+### Vim/MacVim Installation (Macos)
 
+``` 
+brew install vim --with-lua --with-python3 --with-override-system-vim 
+```
+```
+brew install macvim --with-lua --with-override-system-vim
+brew linkapps macvim
+```
+
+Link vimrc file:
 ```
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-Set up Vundle
-
+### Neovim Installation (Macos)
 ```
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```
-
-
-Install bundled plugins
-
-```
-vim +BundleInstall +qall
+brew install neovim/neovim/neovim
+pip2 install neovim
+pip3 install neovim
 ```
 
-
-Build vimproc
+link newvim config files:
 ```
-cd ~/.vim/bundle/vimproc.vim && make
+mkdir ~/.config
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 ```
 
-Create ```~/.vim/swaps``` and ```~/.vim/backups```.
+### Configurations
 
+Install plug.vim
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Create folders for backup files
 ``` 
 mkdir -p ~/.vim/swaps ~/.vim/backups 
 ```
 
-## Dependencies ##
-* Vim 7.3+ with Lua enabled
-* Exuberant Ctags (http://ctags.sourceforge.net/)
-* Python support for Vim
-* ack-grep
-* Python 2.4+
-
-For Mac users, simply do
-``` 
-brew install vim --with-lua --with-override-system-vim 
-brew install ctags ack 
-```
-
-Mac Vim:
-```
-brew install macvim --with-cscope --with-lua --with-override-system-vim 
-brew linkapps macvim
-```
-
-## Key Bindings
-
-* F1 - Quick Save
-* F2 - Toggle Paste Mode
-* F3 - Insert current time
-* F4 - GundoToggle
-* F5 - NERDTreeToggle
-* F6 - TagbarToggle
-* F7 - Checktime - reload files
-* F8 - Show errors
-
-## Notes
-
-* Neocomplete requires Vim 7.3.885+ with Lua enabled. Refer to
-[Neocomplete.vim](https://github.com/Shougo/neocomplete.vim) for more
-installation instructions. 
-
-* To have a nicer looking status bar, pick and install a font from [Powerline
-Fonts](https://github.com/Lokaltog/powerline-fonts) and patch it to your
-terminal environment.
 
 
-have fun ;-)
+Run `:PlugInstall` to install plugins.

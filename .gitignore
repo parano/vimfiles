@@ -4,4 +4,6 @@ backups/
 bundle/
 .netrwhist
 sessions/
+autoload/
+init.vim
 
