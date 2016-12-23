@@ -53,6 +53,9 @@ Create folders for backup files
 mkdir -p ~/.vim/swaps ~/.vim/backups 
 ```
 
-
-
 Run `:PlugInstall` to install plugins.
+
+
+### Trouble shotting
+
+Having problem with <C-h>? see https://github.com/neovim/neovim/issues/2048
