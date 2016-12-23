@@ -47,11 +47,16 @@ set linespace=4
 set smarttab
 set autoindent
 autocmd BufEnter *.md set filetype=markdown
+autocmd BufEnter *.jsx set filetype=javascript
+autocmd BufEnter *.jsx set syntax=javascript
+autocmd BufEnter *.js set filetype=javascript
 autocmd FileType markdown setlocal textwidth=80
 autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,jade,jsx,coffee,python,bzl setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
-"autocmd FileType python set textwidth=0
 
-let g:syntastic_javascript_checkers = ['eslint']
+"autocmd FileType python set textwidth=0
+"autocmd Syntax jquery set syntax=javascript
+
+"let g:syntastic_javascript_checkers = ['eslint']
 
 " some stuff to get the mouse going in term
 set mouse=a
@@ -355,3 +360,12 @@ set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,gb18030,big5
 
 " the same as autochdir
 autocmd BufEnter * silent! lcd %:p:h
+
+" scala
+"autocmd BufWritePost *.scala silent :EnTypeCheck
+
+"nnoremap <leader>t :EnTypeCheck<CR>
+
+"au FileType scala nnoremap <leader>df :EnDeclarationSplit v<CR>
+
+let g:vim_json_syntax_conceal = 0
