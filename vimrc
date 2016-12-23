@@ -29,7 +29,6 @@ Plug 'google/vim-ft-bzl'
 
 call plug#end()
 
-
 if has("gui_running")
     set t_Co=256
     set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
@@ -134,32 +133,10 @@ set noerrorbells
 set novisualbell
 set visualbell t_vb=
 
-"jump to last cursor position when opening a file
-"dont do it when writing a commit log entry
-autocmd BufReadPost * call SetCursorPosition()
-function! SetCursorPosition()
-    if &filetype !~ 'commit\c'
-        if line("'\"") > 0 && line("'\"") <= line("$")
-            exe "normal! g`\""
-            normal! zz
-        endif
-    end
-endfunction
-
 " toggle paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
-
-"visual search mappings
-function! s:VSetSearch()
-    let temp = @@
-    norm! gvy
-    let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
-    let @@ = temp
-endfunction
-vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
-vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
 inoremap jj <Esc><Esc>
 inoremap jk <Esc><Esc>
