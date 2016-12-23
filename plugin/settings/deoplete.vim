@@ -10,5 +10,12 @@ let g:tern_request_timeout = 1
 let g:tern#filetypes = [
   \ 'js',
   \ 'jsx',
-  \ 'ts',
+  \ 'ts'
   \ ]
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
+
+" close preview window
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
