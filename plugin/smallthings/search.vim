@@ -1,4 +1,4 @@
-"visual search mappings
+" visual search mappings
 function! s:VSetSearch()
     let temp = @@
     norm! gvy
@@ -7,3 +7,6 @@ function! s:VSetSearch()
 endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
+
+" search and replace shortcut
+nmap <Leader>s :%s//cg<Left><Left><Left>

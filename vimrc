@@ -11,6 +11,11 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'shougo/denite.nvim'
 
+" Code auto completion
+Plug 'Shougo/deoplete.nvim'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'zchee/deoplete-jedi'
+
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
 
@@ -23,6 +28,10 @@ Plug 'othree/yajs.vim'
 Plug 'othree/es.next.syntax.vim'
 Plug 'othree/jsdoc-syntax.vim'
 Plug 'othree/html5.vim'
+
+Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
+Plug 'othree/javascript-libraries-syntax.vim'
 
 " Bazel
 Plug 'google/vim-ft-bzl'
@@ -94,6 +103,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Number of undo levels.
+if &undolevels < 200
+    set undolevels=200
+endif
+
 " indent settings
 set expandtab
 set shiftwidth=4
@@ -141,3 +155,8 @@ set pastetoggle=<F2>
 inoremap jj <Esc><Esc>
 inoremap jk <Esc><Esc>
 inoremap kj <Esc><Esc>
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+" Use smartcase.
+let g:deoplete#enable_smart_case = 1

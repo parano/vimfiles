@@ -55,6 +55,16 @@ mkdir -p ~/.vim/swaps ~/.vim/backups
 
 Run `:PlugInstall` to install plugins.
 
+For Javascript/Python auto-complete:
+```
+pip install jedi
+```
+```
+npm install -g tern
+```
+
+
+
 
 ### Trouble shotting
 
