@@ -16,7 +16,7 @@ Plug 'vim-syntastic/syntastic'
 " Code auto completion
 Plug 'Shougo/deoplete.nvim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
-Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi', { 'for': ['python'] } " python code auto completion
 
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
