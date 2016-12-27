@@ -3,20 +3,26 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-sensible'
+
 Plug 'bling/vim-airline'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'shougo/denite.nvim'
 
 Plug 'vim-syntastic/syntastic'
 
-" Code auto completion
-Plug 'Shougo/deoplete.nvim'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
-Plug 'zchee/deoplete-jedi', { 'for': ['python'] } " python code auto completion
+" Code auto completion in neovim
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
+    Plug 'zchee/deoplete-jedi', { 'for': ['python'] } " python code auto completion
+else
+    Plug 'Shougo/neocomplete.vim'
+endif
 
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
@@ -39,6 +45,17 @@ Plug 'google/vim-ft-bzl', { 'for': ['bzl'] }
 
 call plug#end()
 
+" Plugin configurations
+source ~/.vim/config/plugins/airline.vim
+source ~/.vim/config/plugins/denite.vim
+source ~/.vim/config/plugins/gitgutter.vim
+source ~/.vim/config/plugins/nerdtree.vim
+if has('nvim') " neovim only plugin
+    source ~/.vim/config/plugins/deoplete.vim
+else
+    source ~/.vim/config/plugins/neocomplete.vim
+endif
+
 if has("gui_running")
     set t_Co=256
     set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
@@ -49,8 +66,6 @@ else
     if has('nvim')
         set termguicolors
         set t_Co=256
-        set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
-        set guioptions-=r " Removes right hand scroll bar
         set background=dark
         colorscheme wombat
     else
@@ -156,3 +171,9 @@ set pastetoggle=<F2>
 inoremap jj <Esc><Esc>
 inoremap jk <Esc><Esc>
 inoremap kj <Esc><Esc>
+
+" additional configs
+source ~/.vim/config/emacs.vim
+source ~/.vim/config/lastcursor.vim
+source ~/.vim/config/numbering.vim
+source ~/.vim/config/search.vim
