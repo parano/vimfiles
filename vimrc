@@ -8,6 +8,7 @@ Plug 'bling/vim-airline'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/nerdcommenter'
 
