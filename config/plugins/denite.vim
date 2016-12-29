@@ -26,13 +26,14 @@ call denite#custom#alias('source', 'file_rec/git', 'file_rec')
 call denite#custom#var('file_rec/git', 'command',
   \ ['git', 'ls-tree', '-r', '--name-only', 'HEAD', '--', ':/'])
 
-" search git repo
-noremap <leader>t :<C-u>Denite file_rec/git<cr>
 " search buffer
 noremap <leader>b :<C-u>Denite buffer<cr>
-" search with grep
-noremap <leader>f :<C-u>Denite grep<cr>
+
+" search git repo
+noremap <leader>t :<C-u>Denite file_rec/git<cr>
+
 " search current folder
 noremap <leader>c :<C-u>Denite file_rec<cr>
 
-
+" search with grep
+noremap <leader>f :<C-u>Denite grep<cr>

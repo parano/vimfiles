@@ -1,5 +1,3 @@
-source ~/.vim/config/general.vim
-
 "!Plug.vim
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -22,7 +20,7 @@ Plug 'vim-syntastic/syntastic'
 if has('nvim')
     Plug 'Shougo/deoplete.nvim'
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
-    Plug 'zchee/deoplete-jedi', { 'for': ['python'] } " python code auto completion
+    Plug 'zchee/deoplete-jedi', { 'for': 'python' } " python code auto completion
 else
     Plug 'Shougo/neocomplete.vim'
 endif
@@ -30,9 +28,17 @@ endif
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
 
+""" Language specific plugins
+
 " scala
-Plug 'derekwyatt/vim-scala', {'for' : 'scala'}
+Plug 'derekwyatt/vim-scala', { 'for' : 'scala' }
 "Plug 'ensime/ensime-vim'
+
+" docker
+Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
+
+" jsonnet
+Plug 'google/vim-jsonnet', { 'for': 'jsonnet' }
 
 " javascript
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
@@ -41,12 +47,15 @@ Plug 'othree/jsdoc-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/html5.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json', { 'for': 'json' }
 
 " Bazel
-Plug 'google/vim-ft-bzl', { 'for': ['bzl'] }
+Plug 'google/vim-ft-bzl', { 'for': 'bzl' }
 
 call plug#end()
+
+" Basic settings and key bindings
+source ~/.vim/config/general.vim
 
 " additional configs
 source ~/.vim/config/colors.vim
