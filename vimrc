@@ -67,6 +67,7 @@ source ~/.vim/config/search.vim
 " Plugin configurations
 source ~/.vim/config/plugins/airline.vim
 source ~/.vim/config/plugins/denite.vim
+source ~/.vim/config/plugins/syntastic.vim
 source ~/.vim/config/plugins/gitgutter.vim
 source ~/.vim/config/plugins/nerdtree.vim
 if has('nvim') " neovim only plugin

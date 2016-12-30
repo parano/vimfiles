@@ -55,11 +55,14 @@ set textwidth=0
 set linespace=4
 set smarttab
 set autoindent
+
 autocmd BufEnter *.md set filetype=markdown
 autocmd BufEnter *.jsonnet.TEMPLATE set filetype=jsonnet
+
 autocmd FileType markdown setlocal textwidth=80
 autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,jade,jsx,coffee,python,bzl setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
 autocmd FileType python set textwidth=0
+autocmd FileType javascript,javascript.jsx set colorcolumn=100
 
 " search better
 nnoremap / /\v\c
