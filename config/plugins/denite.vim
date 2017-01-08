@@ -26,14 +26,21 @@ call denite#custom#alias('source', 'file_rec/git', 'file_rec')
 call denite#custom#var('file_rec/git', 'command',
   \ ['git', 'ls-tree', '-r', '--name-only', 'HEAD', '--', ':/'])
 
-" search buffer
+call denite#custom#var('grep', 'command', ['rg'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'final_opts', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'default_opts', ['-i', '--vimgrep', '--no-heading'])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+
+" search file buffer
 noremap <leader>b :<C-u>Denite buffer<cr>
 
-" search git repo
+" search file in git repo
 noremap <leader>t :<C-u>Denite file_rec/git<cr>
 
-" search current folder
+" search file in current folder
 noremap <leader>c :<C-u>Denite file_rec<cr>
 
-" search with grep
-noremap <leader>f :<C-u>Denite grep<cr>
+" search keyword with ripgrep
+noremap <leader>g :<C-u>Denite grep<cr>

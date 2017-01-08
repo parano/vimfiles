@@ -46,6 +46,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 Install Dependencies:
 ``` 
 brew install the_silver_searcher
+brew install ripgrep
 ```
 
 Create folders for backup files

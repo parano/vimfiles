@@ -31,8 +31,11 @@ Plug 'Raimondi/delimitMate'
 """ Language specific plugins
 
 " scala
-Plug 'derekwyatt/vim-scala', { 'for' : 'scala' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 "Plug 'ensime/ensime-vim'
+
+" Go
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 " docker
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
