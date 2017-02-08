@@ -6,4 +6,4 @@ bundle/
 sessions/
 autoload/
 init.vim
-
+.DS_Store
