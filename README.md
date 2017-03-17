@@ -67,4 +67,9 @@ npm install -g tern
 
 ### Trouble shotting
 
-Having problem with `<C-h>`? see https://github.com/neovim/neovim/issues/2048
+Mac users having problem with `<C-h>`? see https://github.com/neovim/neovim/issues/2048
+
+```
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+tic $TERM.ti
+```
