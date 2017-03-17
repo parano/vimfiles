@@ -35,7 +35,7 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 "Plug 'ensime/ensime-vim'
 
 " Go
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " docker
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
@@ -72,6 +72,7 @@ source ~/.vim/config/plugins/airline.vim
 source ~/.vim/config/plugins/denite.vim
 source ~/.vim/config/plugins/syntastic.vim
 source ~/.vim/config/plugins/gitgutter.vim
+source ~/.vim/config/plugins/go.vim
 source ~/.vim/config/plugins/nerdtree.vim
 if has('nvim') " neovim only plugin
     source ~/.vim/config/plugins/deoplete.vim
