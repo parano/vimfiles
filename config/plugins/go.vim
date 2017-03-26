@@ -8,9 +8,12 @@ au FileType go nmap <leader>i <Plug>(go-info)
 " Jump to definition
 au FileType go nmap <leader>d <Plug>(go-def)
 
+" Find usage
+au FileType go nnoremap <leader>f :execute 'GoRef'<CR>
+
 "let g:go_fmt_command = "goimports"
-"let g:go_fmt_fail_silently = 1
-"let g:go_fmt_autosave = 0
+let g:go_fmt_fail_silently = 1
+let g:go_fmt_autosave = 0
 
 au FileType go nmap <leader>ds <Plug>(go-def-split)
 au FileType go nmap <leader>dv <Plug>(go-def-vertical)
