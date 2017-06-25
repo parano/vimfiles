@@ -1,13 +1,9 @@
 myVimfiles
 ==============
 
-Clone this repo:
-```
-git clone git://github.com/parano/vimfiles.git ~/.vim
-```
+### VIM/NEOVIM Installation
 
-### Vim/MacVim Installation (Macos)
-
+Vim/MacVim Installation (MacOS)
 ``` 
 brew install vim --with-lua --with-python3 --with-override-system-vi
 ```
@@ -16,16 +12,23 @@ brew install macvim --with-lua --with-python3 --with-override-system-vim
 brew linkapps macvim
 ```
 
-Link vimrc file:
-```
-ln -s ~/.vim/vimrc ~/.vimrc
-```
-
-### Neovim Installation (Macos)
+Neovim Installation (MacOS)
 ```
 brew install neovim/neovim/neovim
 pip2 install neovim
 pip3 install neovim
+```
+
+### Config Installation
+
+Clone this repo:
+```
+git clone git://github.com/parano/vimfiles.git ~/.vim
+```
+
+Link vimrc file:
+```
+ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
 link neovim config files:
@@ -34,8 +37,6 @@ mkdir ~/.config
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 ```
-
-### Configurations
 
 Install plug.vim
 ```
