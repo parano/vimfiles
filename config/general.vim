@@ -52,20 +52,27 @@ endif
 
 " indent settings
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set textwidth=0
-set linespace=4
+set linespace=2
 set smarttab
 set autoindent
 
-autocmd BufEnter *.md set filetype=markdown
-autocmd BufEnter *.jsonnet.TEMPLATE set filetype=jsonnet
+au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.jsonnet.TEMPLATE set filetype=jsonnet
 
 autocmd FileType markdown setlocal textwidth=80
-autocmd FileType html,css,less,haml,sass,scss,ruby,javascript,javascript.jsx,jade,jsx,coffee,python,bzl,scala setlocal tabstop=2 shiftwidth=2 softtabstop=2 linespace=2
 autocmd FileType python set textwidth=0
 autocmd FileType javascript,javascript.jsx set colorcolumn=100
+
+au BufRead,BufNewFile *.nginx set ft=nginx
+au BufRead,BufNewFile nginx*.conf set ft=nginx
+au BufRead,BufNewFile *nginx.conf set ft=nginx
+au BufRead,BufNewFile */etc/nginx/* set ft=nginx
+au BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
+au BufRead,BufNewFile */*nginx*/*.conf set ft=nginx
 
 " search better
 nnoremap / /\v\c

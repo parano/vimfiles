@@ -55,6 +55,9 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 " Bazel
 Plug 'google/vim-ft-bzl', { 'for': 'bzl' }
 
+" Nginx
+Plug 'chr4/nginx.vim'
+
 call plug#end()
 
 " Basic settings and key bindings
