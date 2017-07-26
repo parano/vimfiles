@@ -79,6 +79,8 @@ source ~/.vim/config/plugins/go.vim
 source ~/.vim/config/plugins/nerdtree.vim
 if has('nvim') " neovim only plugin
     source ~/.vim/config/plugins/deoplete.vim
+    let g:python_host_prog = '/usr/local/bin/python'
+    let g:python3_host_prog = '/usr/local/bin/python3'
 else
     source ~/.vim/config/plugins/neocomplete.vim
 endif
