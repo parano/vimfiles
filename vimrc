@@ -52,6 +52,9 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
+" typescript
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+
 " Bazel
 Plug 'google/vim-ft-bzl', { 'for': 'bzl' }
 
