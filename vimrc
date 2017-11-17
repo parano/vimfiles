@@ -64,6 +64,9 @@ Plug 'google/vim-ft-bzl', { 'for': 'bzl' }
 " Nginx
 Plug 'chr4/nginx.vim'
 
+" YAML
+Plug 'ingydotnet/yaml-vim'
+
 call plug#end()
 
 " Basic settings and key bindings

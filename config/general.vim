@@ -108,3 +108,6 @@ set pastetoggle=<F2>
 inoremap jj <Esc><Esc>
 inoremap jk <Esc><Esc>
 inoremap kj <Esc><Esc>
+
+" use 2 space indentation for jsonnet
+let g:jsonnet_fmt_options = ' -n 2'
