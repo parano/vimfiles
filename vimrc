@@ -16,7 +16,9 @@ Plug 'shougo/denite.nvim'
 
 Plug 'vim-syntastic/syntastic'
 
+" colors, themes
 Plug 'lifepillar/vim-solarized8'
+Plug 'nanotech/jellybeans.vim'
 
 " Code auto completion in neovim
 if has('nvim')
