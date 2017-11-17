@@ -6,8 +6,8 @@ Plug 'tpope/vim-sensible'
 
 Plug 'bling/vim-airline'
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/nerdcommenter'
@@ -16,11 +16,13 @@ Plug 'shougo/denite.nvim'
 
 Plug 'vim-syntastic/syntastic'
 
+Plug 'lifepillar/vim-solarized8'
+
 " Code auto completion in neovim
 if has('nvim')
     Plug 'Shougo/deoplete.nvim'
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
-    Plug 'zchee/deoplete-jedi', { 'for': 'python' } " python code auto completion
+    Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 else
     Plug 'Shougo/neocomplete.vim'
 endif
@@ -52,8 +54,9 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
-" typescript
+" Typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " Bazel
 Plug 'google/vim-ft-bzl', { 'for': 'bzl' }
@@ -80,8 +83,11 @@ source ~/.vim/config/plugins/syntastic.vim
 source ~/.vim/config/plugins/gitgutter.vim
 source ~/.vim/config/plugins/go.vim
 source ~/.vim/config/plugins/nerdtree.vim
+
 if has('nvim') " neovim only plugin
     source ~/.vim/config/plugins/deoplete.vim
+    let g:python_host_prog = '/usr/local/bin/python'
+    let g:python3_host_prog = '/usr/local/bin/python3'
 else
     source ~/.vim/config/plugins/neocomplete.vim
 endif

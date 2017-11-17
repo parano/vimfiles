@@ -11,8 +11,9 @@ else
         set background=dark
         colorscheme wombat
     else
+        set termguicolors
         set t_Co=256
         set background=dark
-        colorscheme ir_black
+        colorscheme solarized8
     endif
 endif

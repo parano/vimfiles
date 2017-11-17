@@ -1,9 +1,16 @@
-myVimfiles
+My NeoVim configurations
 ==============
 
-### VIM/NEOVIM Installation
+### NEOVIM Installation
 
-Vim/MacVim Installation (MacOS)
+Neovim Installation (MacOS)
+```
+brew install neovim/neovim/neovim
+/usr/local/bin/pip2 install neovim
+/usr/local/bin/pip3 install neovim
+```
+
+Optional Vim/MacVim Installation (MacOS)
 ``` 
 brew install vim --with-lua --with-python3 --with-override-system-vi
 ```
@@ -12,14 +19,7 @@ brew install macvim --with-lua --with-python3 --with-override-system-vim
 brew linkapps macvim
 ```
 
-Neovim Installation (MacOS)
-```
-brew install neovim/neovim/neovim
-pip2 install neovim
-pip3 install neovim
-```
-
-### Config Installation
+### Configurations
 
 Clone this repo:
 ```
@@ -38,6 +38,11 @@ ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 ```
 
+Create folders for backup files
+``` 
+mkdir -p ~/.vim/swaps ~/.vim/backups 
+```
+
 Install plug.vim
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -50,14 +55,12 @@ brew install the_silver_searcher
 brew install ripgrep
 ```
 
-Create folders for backup files
-``` 
-mkdir -p ~/.vim/swaps ~/.vim/backups 
-```
-
 Run `:PlugInstall` and `:UpdateRemotePlugins` to install plugins.
 
-For Javascript/Python auto-complete:
+### Optional configs
+
+* For better auto-complete in Javascript Python:
+
 ```
 pip install jedi
 ```
@@ -65,6 +68,9 @@ pip install jedi
 npm install -g tern
 ```
 
+* To have a nicer looking status bar, install [Powerline
+Fonts](https://github.com/Lokaltog/powerline-fonts) and patch it to your
+terminal environment.
 
 ### Trouble shotting
 
