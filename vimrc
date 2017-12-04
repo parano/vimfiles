@@ -20,14 +20,16 @@ Plug 'vim-syntastic/syntastic'
 Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 
-" Code auto completion in neovim
+" auto completion with deoplete
 if has('nvim')
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
-    Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-    Plug 'Shougo/neocomplete.vim'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
@@ -89,11 +91,3 @@ source ~/.vim/config/plugins/gitgutter.vim
 source ~/.vim/config/plugins/go.vim
 source ~/.vim/config/plugins/nerdtree.vim
 source ~/.vim/config/plugins/deoplete.vim
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
