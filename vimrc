@@ -71,6 +71,9 @@ Plug 'chr4/nginx.vim'
 " YAML
 Plug 'ingydotnet/yaml-vim'
 
+" GraphQL
+Plug 'jparise/vim-graphql'
+
 call plug#end()
 
 " Basic settings and key bindings
