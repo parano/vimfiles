@@ -1,6 +1,3 @@
-let g:python_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
-
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 " Use smartcase.
@@ -21,3 +18,12 @@ inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
 
 " close preview window
 autocmd CompleteDone * pclose!
+
+" Disable the candidates in Comment/String syntaxes.
+call deoplete#custom#source('_',
+      \ 'disabled_syntaxes', ['Comment', 'String'])
+
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" https://github.com/Shougo/deoplete.nvim/issues/694
+let g:deoplete#num_processes = 1
