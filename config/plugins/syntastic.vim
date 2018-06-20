@@ -19,3 +19,6 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+
+" PyLint
+let g:syntastic_python_pylint_args = "--rcfile=~/.pylintrc"
