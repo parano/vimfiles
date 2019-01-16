@@ -34,6 +34,9 @@ Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
 
+"tabnine auto complete
+Plug 'zxqfl/tabnine-vim'
+
 """ Language specific plugins
 
 " scala
