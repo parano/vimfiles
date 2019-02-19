@@ -14,10 +14,12 @@ else
         set termguicolors
         set t_Co=256
         set background=dark
-        "colorscheme solarized8
         let g:jellybeans_overrides = {
               \    'background': { 'guibg': '212121' },
               \}
         colorscheme jellybeans
+        "colorscheme solarized8
+        "colorscheme solarized8_low
+        "colorscheme solarized8_high
     endif
 endif
