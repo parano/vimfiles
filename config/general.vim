@@ -95,6 +95,9 @@ let mapleader=","
 " copy yanked text to clipboard
 vnoremap <C-c> "+y
 
+" copy paste :D
+set clipboard=unnamed
+
 " disable visual bell
 set noerrorbells
 set novisualbell
