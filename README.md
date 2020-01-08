@@ -19,6 +19,11 @@ brew install macvim --with-lua --with-python3 --with-override-system-vim
 brew linkapps macvim
 ```
 
+For `deoplete` to work properly, install `pynvim`:
+```
+/usr/bin/pip3 install --user pynvim
+```
+
 ### Configurations
 
 Clone this repo:
