@@ -1,6 +1,8 @@
 " turn on syntax highlighting
 syntax on
 
+set encoding=utf-8
+
 " backspace and delete problem
 set backspace=indent,eol,start
 
