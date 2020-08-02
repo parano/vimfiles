@@ -1,25 +1,21 @@
-My NeoVim configurations
+My VIM configurations
 ==============
 
-### NEOVIM Installation
+### VIM Installation (Mac OS)
 
-Neovim Installation (MacOS)
-```
-brew install neovim/neovim/neovim
-/usr/local/bin/pip2 install neovim
-/usr/local/bin/pip3 install neovim
-```
+Vim/MacVim Installation (MacOS)
 
-Optional Vim/MacVim Installation (MacOS)
 ``` 
-brew install vim --with-lua --with-python3 --with-override-system-vi
+brew install vim 
 ```
+
 ```
 brew install macvim --with-lua --with-python3 --with-override-system-vim
 brew linkapps macvim
 ```
 
-For `deoplete` to work properly, install `pynvim`:
+
+For `deoplete.nvim` to work properly, install `pynvim`:
 ```
 /usr/bin/pip3 install --user pynvim
 ```
@@ -36,13 +32,6 @@ Link vimrc file:
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-link neovim config files:
-```
-mkdir ~/.config
-ln -s ~/.vim ~/.config/nvim
-ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
-```
-
 Create folders for backup files
 ``` 
 mkdir -p ~/.vim/swaps ~/.vim/backups 
@@ -56,11 +45,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 Install Dependencies:
 ``` 
-brew install the_silver_searcher
-brew install ripgrep
+brew install the_silver_searcher ripgrep
 ```
 
-Run `:PlugInstall` and `:UpdateRemotePlugins` to install plugins.
+Run `:PlugInstall` to install plugins.
 
 ### Optional configs
 
@@ -77,11 +65,3 @@ npm install -g tern
 Fonts](https://github.com/Lokaltog/powerline-fonts) and patch it to your
 terminal environment.
 
-### Trouble shotting
-
-Mac users having problem with `<C-h>`? see https://github.com/neovim/neovim/issues/2048
-
-```
-infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
-tic $TERM.ti
-```

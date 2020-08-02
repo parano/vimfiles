@@ -21,15 +21,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 
-" auto completion with deoplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  pythonx import pynvim
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
@@ -113,4 +107,4 @@ source ~/.vim/config/plugins/nerdtree.vim
 source ~/.vim/config/plugins/deoplete.vim
 "source ~/.vim/config/plugins/go.vim
 "source ~/.vim/config/plugins/javascript-libraries.vim
-
+"
