@@ -4,7 +4,7 @@ syntax on
 set encoding=utf-8
 
 set pyxversion=3
-# use system default python (MacOS)
+" use system default python (MacOS)
 let g:python_host_prog = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python3"
 
