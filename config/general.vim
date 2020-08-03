@@ -3,9 +3,10 @@ syntax on
 
 set encoding=utf-8
 
-" use python2 when `:echo has('pythonx')` returns 1
-" https://github.com/roxma/vim-hug-neovim-rpc#requirements
-set pyxversion=2
+set pyxversion=3
+# use system default python (MacOS)
+let g:python_host_prog = "/usr/bin/python2"
+let g:python3_host_prog = "/usr/bin/python3"
 
 " backspace and delete problem
 set backspace=indent,eol,start
