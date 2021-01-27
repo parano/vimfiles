@@ -7,3 +7,6 @@ inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
 
 " close preview window
 autocmd CompleteDone * pclose!
+
+" deoplete-jedi
+let g:deoplete#sources#jedi#show_docstring = 1
