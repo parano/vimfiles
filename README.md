@@ -15,11 +15,6 @@ brew linkapps macvim
 ```
 
 
-For `deoplete.nvim` to work properly, install `pynvim`:
-```
-/usr/bin/pip3 install --user pynvim
-```
-
 ### Configurations
 
 Clone this repo:
@@ -50,16 +45,9 @@ brew install the_silver_searcher ripgrep
 
 Run `:PlugInstall` to install plugins.
 
+
 ### Optional configs
 
-* For better auto-complete in Javascript Python:
-
-```
-pip install jedi
-```
-```
-npm install -g tern
-```
 
 * To have a nicer looking status bar, install [Powerline
 Fonts](https://github.com/Lokaltog/powerline-fonts) and patch it to your

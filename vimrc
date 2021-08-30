@@ -20,6 +20,8 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Jumping to files
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
@@ -71,7 +73,6 @@ Plug 'ingydotnet/yaml-vim'
 " JSON
 Plug 'elzr/vim-json', { 'for': 'json' }
 
-
 " GraphQL
 "Plug 'jparise/vim-graphql'
 
@@ -89,8 +90,8 @@ source ~/.vim/config/numbering.vim
 
 " Plugin configurations
 source ~/.vim/config/plugins/airline.vim
-source ~/.vim/config/plugins/denite.vim
 source ~/.vim/config/plugins/syntastic.vim
 source ~/.vim/config/plugins/gitgutter.vim
 source ~/.vim/config/plugins/nerdtree.vim
 source ~/.vim/config/plugins/coc.vim
+source ~/.vim/config/plugins/fzf.vim
