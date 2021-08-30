@@ -3,16 +3,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-sensible'
-
 Plug 'bling/vim-airline'
-
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
-
 Plug 'scrooloose/nerdcommenter'
-
-Plug 'shougo/denite.nvim'
 
 "" syntax checking and highlighting
 Plug 'vim-syntastic/syntastic'
@@ -21,22 +16,19 @@ Plug 'vim-syntastic/syntastic'
 Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+" Auto completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Jumping to files
 
 " Auto completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
 
-" tabnine auto complete
-Plug 'zxqfl/tabnine-vim'
-
-
 """ Language specific plugins
 
 " Python
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-Plug 'nvie/vim-flake8'
+"Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+"Plug 'nvie/vim-flake8'
 
 " Scala
 "Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
@@ -59,7 +51,6 @@ Plug 'nvie/vim-flake8'
 "Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 
-
 """ Build & Dev Tool specific plugins
 
 " docker
@@ -72,7 +63,7 @@ Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 "Plug 'google/vim-ft-bzl', { 'for': 'bzl' }
 
 " Nginx
-Plug 'chr4/nginx.vim'
+"Plug 'chr4/nginx.vim'
 
 " YAML
 Plug 'ingydotnet/yaml-vim'
@@ -94,9 +85,7 @@ source ~/.vim/config/colors.vim
 source ~/.vim/config/emacs.vim
 source ~/.vim/config/lastcursor.vim
 source ~/.vim/config/search.vim
-
-" optional
-"source ~/.vim/config/numbering.vim
+source ~/.vim/config/numbering.vim
 
 " Plugin configurations
 source ~/.vim/config/plugins/airline.vim
@@ -104,7 +93,4 @@ source ~/.vim/config/plugins/denite.vim
 source ~/.vim/config/plugins/syntastic.vim
 source ~/.vim/config/plugins/gitgutter.vim
 source ~/.vim/config/plugins/nerdtree.vim
-source ~/.vim/config/plugins/deoplete.vim
-"source ~/.vim/config/plugins/go.vim
-"source ~/.vim/config/plugins/javascript-libraries.vim
-"
+source ~/.vim/config/plugins/coc.vim

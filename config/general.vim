@@ -8,6 +8,9 @@ set pyxversion=3
 let g:python_host_prog = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python3"
 
+" faster response
+set updatetime=300
+
 " backspace and delete problem
 set backspace=indent,eol,start
 
@@ -48,9 +51,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-if has('nvim')
-    nmap <BS> <C-W>h
-endif
 
 " Number of undo levels.
 if &undolevels < 200
@@ -71,7 +71,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.jsonnet.TEMPLATE set filetype=jsonnet
 
 autocmd FileType markdown setlocal textwidth=80
-autocmd FileType python set textwidth=0
+autocmd FileType python set textwidth=88
 autocmd FileType javascript,javascript.jsx set colorcolumn=100
 
 au BufRead,BufNewFile *.nginx set ft=nginx
@@ -88,6 +88,9 @@ vnoremap / /\v\c
 " key mapping for tab navigation
 nmap <Tab> gt
 nmap <S-Tab> gT
+nmap <C-t> :tabedit<CR>
+nmap <S-j> :split<CR>
+nmap <S-l> :vsplit<CR>
 
 " key mapping for textmate-like indentation
 nmap <M-[> <<
@@ -115,7 +118,6 @@ nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-inoremap jj <Esc><Esc>
 inoremap jk <Esc><Esc>
 inoremap kj <Esc><Esc>
 
