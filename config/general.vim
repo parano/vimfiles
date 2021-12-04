@@ -68,11 +68,8 @@ set smarttab
 set autoindent
 
 au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.jsonnet.TEMPLATE set filetype=jsonnet
-
-autocmd FileType markdown setlocal textwidth=80
+autocmd FileType markdown setlocal textwidth=100
 autocmd FileType python set textwidth=88
-autocmd FileType javascript,javascript.jsx set colorcolumn=100
 
 au BufRead,BufNewFile *.nginx set ft=nginx
 au BufRead,BufNewFile nginx*.conf set ft=nginx
