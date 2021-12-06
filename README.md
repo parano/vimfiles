@@ -1,19 +1,6 @@
 My VIM configurations
 ==============
 
-### VIM Installation (Mac OS)
-
-Vim/MacVim Installation (MacOS)
-
-``` 
-brew install vim 
-```
-
-```
-brew install macvim --with-lua --with-python3 --with-override-system-vim
-brew linkapps macvim
-```
-
 
 ### Configurations
 
@@ -38,18 +25,21 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Install Dependencies:
-``` 
-brew install the_silver_searcher ripgrep
-```
-
-Run `:PlugInstall` to install plugins.
+Run `:PlugInstall` to install all VIM plugins.
 
 
 ### Optional configs
 
+Install ripgrep:
+``` 
+brew install ripgrep
 
-* To have a nicer looking status bar, install [Powerline
-Fonts](https://github.com/Lokaltog/powerline-fonts) and patch it to your
-terminal environment.
+# Or
+cargo install ripgrep
+```
 
+
+Install Pyright:
+```
+:CocInstall coc-pyright
+```

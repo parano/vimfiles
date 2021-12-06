@@ -3,7 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-sensible'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
